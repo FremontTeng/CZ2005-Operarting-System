@@ -266,9 +266,31 @@ int lruAlgorithm(void)
 {
   //your code here to find the physical frame that should be freed 
   //according to the LRU algorithm. 
+  //start of code
   int phyPage;
   
+//Need to find the least recently used entry in the memoryTable.
+//The last tick that the physical page is accessed, is stored in memoryTable[i].lastUsed.
+  int lastUsed = memoryTable[0].lastUsed;
+
+//Search for the invalid entry from the beginning of the memoryTable. If there is an invalid entry, return that to be used by the virtual page. 
+  for (int i =0;i<NumPhysPages;i++){
+	//!memoryTable[i].valid
+	if (!memoryTable[i].valid){ 
+		phyPage = i;
+		break;
+		}
+
+	//Otherwise, find a victim (entry with smallest lastUsed) 
+	if (memoryTable[i].lastUsed < lastUsed){
+		lastUsed = memoryTable[i].lastUsed;
+		phyPage = i;
+		}
+	}
+
+//Return the page number
   return phyPage;
+  //end of code
 }
 
 //----------------------------------------------------------------------
