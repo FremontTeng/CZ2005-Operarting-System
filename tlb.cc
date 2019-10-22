@@ -45,6 +45,7 @@ int VpnToPhyPage(int vpn)
   //your code here to get a physical frame for page vpn
   //you can refer to PageOutPageIn(int vpn) to see how an entry was created in ipt
 
+//Start of Code
 //IPT is realised as memory table (see vm/ipt.h).
 //A memory table is used by the algorithm and can be accessed by using memoryTable[i]
 //This memory table has as many entries as there are physical pages
@@ -61,7 +62,8 @@ memoryTable[i].vPage == vpn
 	if (memoryTable[i].valid && memoryTable[i].pid == currentThread->pid && memoryTable[i].vPage == vpn) return i;
 	}
 //Return -1 if no entry can be found that matches the above condition
-	return -1;
+return -1;
+//End of Code	
 }
 
 //----------------------------------------------------------------------
@@ -75,7 +77,46 @@ void InsertToTLB(int vpn, int phyPage)
   int i = 0; //entry in the TLB
   
   //your code to find an empty in TLB or to replace the oldest entry if TLB is full
-  
+//Start of code
+  /*
+If there is no invalid entry, then i should point to the oldest entry
+The oldest entry will be replaced by the new VPN/PhyPage values
+You need to keep track of the oldest entry
+*/
+  static int FIFOPointer = 0;
+/*Once a static variable is initialised, it remains in the memory
+No re-initialisation afterwards*/
+
+  bool isValid = true;
+
+//The size of that array is defined by the constant TLBSize
+for (i = 0; i < TLBSize; i++){
+/*
+A translation entry has several flags
+For example: you can check whether an entry is valid:
+*/
+	if (!(machine->tlb[i].valid)){
+		isValid = false;
+		break;
+	//If there is an invalid TLB entry, then i should point to it
+	}
+  }
+
+//If there is no invalid entry, then i should point to the oldest entry
+if (isValid){
+	i = FIFOPointer;
+  }
+//The oldest entry will be replaced by the new VPN/PhyPage values
+   
+/*
+if an entry is just inserted, then the entry next to it is the oldest entry
+Make sure FIFOPointer is always correctly pointing to the oldest entry
+Simple FIFO: if an entry is just inserted, then the entry next to it is the oldest entry
+*/
+  FIFOPointer = (i + 1) % TLBSize;
+
+//End of Code	
+
   // copy dirty data to memoryTable
   if(machine->tlb[i].valid){
     memoryTable[machine->tlb[i].physicalPage].dirty=machine->tlb[i].dirty;
