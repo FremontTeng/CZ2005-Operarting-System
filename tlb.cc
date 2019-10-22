@@ -44,6 +44,28 @@ int VpnToPhyPage(int vpn)
 {
   //your code here to get a physical frame for page vpn
   //you can refer to PageOutPageIn(int vpn) to see how an entry was created in ipt
+
+
+//IPT is realised as memory table (see vm/ipt.h).
+//A memory table is used by the algorithm and can be accessed by using memoryTable[i]
+
+//This memory table has as many entries as there are physical pages
+//A constant is used for that purpose: NumPhysPages
+//Iterate the memory table to find the corresponding physical page entry.
+for (int i=0;i<numPhysPages;i++){
+
+
+/*Return the index i for the physical page entry for which the following conditions are all true:
+memoryTable[i].valid
+memoryTable[i].pid == currentThread->pid
+memoryTable[i].vPage == vpn
+*/
+	if (memoryTable[i].valid && memoryTable[i].pid == currentThread->pid && memoryTable[i].vPage == vpn) return i;
+
+	}
+
+//Return -1 if no entry can be found that matches the above condition
+	return -1;
 }
 
 //----------------------------------------------------------------------
