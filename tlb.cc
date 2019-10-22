@@ -52,7 +52,7 @@ int VpnToPhyPage(int vpn)
 	
 //A constant is used for that purpose: NumPhysPages
 //Iterate the memory table to find the corresponding physical page entry.
-for (int i=0;i<numPhysPages;i++){
+for (int i=0;i<NumPhysPages;i++){
 /*
 Return the index i for the physical page entry for which the following conditions are all true:
 memoryTable[i].valid
