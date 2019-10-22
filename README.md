@@ -1,1 +1,1 @@
-# CZ2005-Operarting-System
+# CZ2005-Operating-System
