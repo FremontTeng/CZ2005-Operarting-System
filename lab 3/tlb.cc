@@ -267,7 +267,7 @@ int lruAlgorithm(void)
   //your code here to find the physical frame that should be freed 
   //according to the LRU algorithm. 
   //start of code
-  int phyPage;
+  int phyPage = 0;
   
 //Need to find the least recently used entry in the memoryTable.
 //The last tick that the physical page is accessed, is stored in memoryTable[i].lastUsed.
