@@ -59,7 +59,7 @@ memoryTable[i].valid
 memoryTable[i].pid == currentThread->pid
 memoryTable[i].vPage == vpn
 */
-	if (memoryTable[i].valid && memoryTable[i].pid == currentThread->pid && memoryTable[i].vPage == vpn) return i;
+	if ((memoryTable[i].valid) && (memoryTable[i].pid == currentThread->pid) && (memoryTable[i].vPage == vpn)) return i;
 	}
 //Return -1 if no entry can be found that matches the above condition
 return -1;
