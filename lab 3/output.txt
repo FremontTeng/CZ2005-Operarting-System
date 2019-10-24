@@ -5,7 +5,7 @@ Scheduling interrupt handler the timer at time = 96
 	interrupts: on -> off
 Time: 10, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(8741098)
+In mapcar, about to invoke 804b454(8d7f098)
 Interrupt handler timer, scheduled at 96
 End of pending interrupts
 	interrupts: off -> on
@@ -22,9 +22,9 @@ The corresponding TLBentry for Page 0 in TLB is 0
 	interrupts: on -> off
 Time: 11, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(8741098)
+In mapcar, about to invoke 804b454(8d7f098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(8741580)
+In mapcar, about to invoke 804b454(8d7f580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -37,9 +37,9 @@ At PC = 0x0: JAL 307
 	interrupts: on -> off
 Time: 12, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(8741098)
+In mapcar, about to invoke 804b454(8d7f098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(8741580)
+In mapcar, about to invoke 804b454(8d7f580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -52,9 +52,9 @@ At PC = 0x4: SLL r0,r0,0
 	interrupts: on -> off
 Time: 13, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(8741098)
+In mapcar, about to invoke 804b454(8d7f098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(8741580)
+In mapcar, about to invoke 804b454(8d7f580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -67,9 +67,9 @@ The corresponding TLBentry for Page 9 in TLB is 1
 	interrupts: on -> off
 Time: 14, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(8741098)
+In mapcar, about to invoke 804b454(8d7f098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(8741580)
+In mapcar, about to invoke 804b454(8d7f580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -82,9 +82,9 @@ At PC = 0x4cc: ADDIU r29,r29,-32
 	interrupts: on -> off
 Time: 15, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(8741098)
+In mapcar, about to invoke 804b454(8d7f098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(8741580)
+In mapcar, about to invoke 804b454(8d7f580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -101,9 +101,9 @@ The corresponding TLBentry for Page 26 in TLB is 2
 	interrupts: on -> off
 Time: 16, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(8741098)
+In mapcar, about to invoke 804b454(8d7f098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(8741580)
+In mapcar, about to invoke 804b454(8d7f580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -118,9 +118,9 @@ Writing VA 0xd6c, size 4, value 0x8
 	interrupts: on -> off
 Time: 17, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(8741098)
+In mapcar, about to invoke 804b454(8d7f098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(8741580)
+In mapcar, about to invoke 804b454(8d7f580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -135,9 +135,9 @@ Writing VA 0xd68, size 4, value 0x0
 	interrupts: on -> off
 Time: 18, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(8741098)
+In mapcar, about to invoke 804b454(8d7f098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(8741580)
+In mapcar, about to invoke 804b454(8d7f580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -150,9 +150,9 @@ At PC = 0x4d8: JAL 48
 	interrupts: on -> off
 Time: 19, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(8741098)
+In mapcar, about to invoke 804b454(8d7f098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(8741580)
+In mapcar, about to invoke 804b454(8d7f580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -165,9 +165,9 @@ At PC = 0x4dc: ADDU r30,r29,r0
 	interrupts: on -> off
 Time: 20, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(8741098)
+In mapcar, about to invoke 804b454(8d7f098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(8741580)
+In mapcar, about to invoke 804b454(8d7f580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -180,9 +180,9 @@ The corresponding TLBentry for Page 1 in TLB is 0
 	interrupts: on -> off
 Time: 21, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(8741098)
+In mapcar, about to invoke 804b454(8d7f098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(8741580)
+In mapcar, about to invoke 804b454(8d7f580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -195,9 +195,9 @@ At PC = 0xc0: JR r0,r31
 	interrupts: on -> off
 Time: 22, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(8741098)
+In mapcar, about to invoke 804b454(8d7f098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(8741580)
+In mapcar, about to invoke 804b454(8d7f580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -210,9 +210,9 @@ At PC = 0xc4: SLL r0,r0,0
 	interrupts: on -> off
 Time: 23, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(8741098)
+In mapcar, about to invoke 804b454(8d7f098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(8741580)
+In mapcar, about to invoke 804b454(8d7f580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -226,9 +226,9 @@ Executing: LUI r4,0
 	interrupts: on -> off
 Time: 24, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(8741098)
+In mapcar, about to invoke 804b454(8d7f098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(8741580)
+In mapcar, about to invoke 804b454(8d7f580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -241,9 +241,9 @@ At PC = 0x4e4: JAL 12
 	interrupts: on -> off
 Time: 25, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(8741098)
+In mapcar, about to invoke 804b454(8d7f098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(8741580)
+In mapcar, about to invoke 804b454(8d7f580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -256,9 +256,9 @@ At PC = 0x4e8: ADDIU r4,r4,1320
 	interrupts: on -> off
 Time: 26, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(8741098)
+In mapcar, about to invoke 804b454(8d7f098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(8741580)
+In mapcar, about to invoke 804b454(8d7f580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -270,9 +270,9 @@ The corresponding TLBentry for Page 0 in TLB is 1
 	interrupts: on -> off
 Time: 27, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(8741098)
+In mapcar, about to invoke 804b454(8d7f098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(8741580)
+In mapcar, about to invoke 804b454(8d7f580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -285,9 +285,9 @@ At PC = 0x30: ADDIU r2,r0,2
 	interrupts: on -> off
 Time: 28, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(8741098)
+In mapcar, about to invoke 804b454(8d7f098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(8741580)
+In mapcar, about to invoke 804b454(8d7f580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -333,7 +333,7 @@ The corresponding TLBentry for Page 10 in TLB is 2 	Translate 0x528, read: phys 
 	Translate 0x536, read: phys addr = 0x136
 	Translate 0x537, read: phys addr = 0x137
 Initializing address space, num pages 27, size 3456
-Forking thread userprogram #1 with func=0x804d2cf, arg=141825872, join=NO
+Forking thread userprogram #1 with func=0x804d2cf, arg=148371280, join=NO
 	interrupts: on -> off
 Putting thread userprogram #1 on ready list.
 	interrupts: off -> on
@@ -342,9 +342,9 @@ Putting thread userprogram #1 on ready list.
 	interrupts: on -> off
 Time: 38, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(8741098)
+In mapcar, about to invoke 804b454(8d7f098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(8741580)
+In mapcar, about to invoke 804b454(8d7f580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -353,9 +353,9 @@ End of pending interrupts
 	interrupts: on -> off
 Time: 39, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(8741098)
+In mapcar, about to invoke 804b454(8d7f098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(8741580)
+In mapcar, about to invoke 804b454(8d7f580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -368,9 +368,9 @@ At PC = 0x38: JR r0,r31
 	interrupts: on -> off
 Time: 40, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(8741098)
+In mapcar, about to invoke 804b454(8d7f098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(8741580)
+In mapcar, about to invoke 804b454(8d7f580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -383,9 +383,9 @@ At PC = 0x3c: SLL r0,r0,0
 	interrupts: on -> off
 Time: 41, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(8741098)
+In mapcar, about to invoke 804b454(8d7f098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(8741580)
+In mapcar, about to invoke 804b454(8d7f580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -397,9 +397,9 @@ The corresponding TLBentry for Page 9 in TLB is 0
 	interrupts: on -> off
 Time: 42, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(8741098)
+In mapcar, about to invoke 804b454(8d7f098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(8741580)
+In mapcar, about to invoke 804b454(8d7f580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -416,9 +416,9 @@ The corresponding TLBentry for Page 26 in TLB is 1
 	interrupts: on -> off
 Time: 43, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(8741098)
+In mapcar, about to invoke 804b454(8d7f098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(8741580)
+In mapcar, about to invoke 804b454(8d7f580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -433,9 +433,9 @@ Writing VA 0xd60, size 4, value 0x1
 	interrupts: on -> off
 Time: 44, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(8741098)
+In mapcar, about to invoke 804b454(8d7f098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(8741580)
+In mapcar, about to invoke 804b454(8d7f580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -451,9 +451,9 @@ Reading VA 0xd60, size 4
 	interrupts: on -> off
 Time: 45, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(8741098)
+In mapcar, about to invoke 804b454(8d7f098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(8741580)
+In mapcar, about to invoke 804b454(8d7f580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -466,9 +466,9 @@ At PC = 0x4f4: JAL 16
 	interrupts: on -> off
 Time: 46, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(8741098)
+In mapcar, about to invoke 804b454(8d7f098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(8741580)
+In mapcar, about to invoke 804b454(8d7f580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -481,9 +481,9 @@ At PC = 0x4f8: SLL r0,r0,0
 	interrupts: on -> off
 Time: 47, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(8741098)
+In mapcar, about to invoke 804b454(8d7f098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(8741580)
+In mapcar, about to invoke 804b454(8d7f580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -495,9 +495,9 @@ The corresponding TLBentry for Page 0 in TLB is 2
 	interrupts: on -> off
 Time: 48, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(8741098)
+In mapcar, about to invoke 804b454(8d7f098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(8741580)
+In mapcar, about to invoke 804b454(8d7f580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -510,9 +510,9 @@ At PC = 0x40: ADDIU r2,r0,3
 	interrupts: on -> off
 Time: 49, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(8741098)
+In mapcar, about to invoke 804b454(8d7f098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(8741580)
+In mapcar, about to invoke 804b454(8d7f580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -531,9 +531,9 @@ Switching from thread main #0 to thread userprogram #1
 	interrupts: on -> off
 Time: 59, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(8741098)
+In mapcar, about to invoke 804b454(8d7f098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(8741580)
+In mapcar, about to invoke 804b454(8d7f580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -548,9 +548,9 @@ The corresponding TLBentry for Page 0 in TLB is 0
 	interrupts: on -> off
 Time: 60, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(8741098)
+In mapcar, about to invoke 804b454(8d7f098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(8741580)
+In mapcar, about to invoke 804b454(8d7f580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -563,9 +563,9 @@ At PC = 0x0: JAL 307
 	interrupts: on -> off
 Time: 61, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(8741098)
+In mapcar, about to invoke 804b454(8d7f098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(8741580)
+In mapcar, about to invoke 804b454(8d7f580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -578,9 +578,9 @@ At PC = 0x4: SLL r0,r0,0
 	interrupts: on -> off
 Time: 62, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(8741098)
+In mapcar, about to invoke 804b454(8d7f098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(8741580)
+In mapcar, about to invoke 804b454(8d7f580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -594,9 +594,9 @@ The corresponding TLBentry for Page 9 in TLB is 1
 	interrupts: on -> off
 Time: 63, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(8741098)
+In mapcar, about to invoke 804b454(8d7f098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(8741580)
+In mapcar, about to invoke 804b454(8d7f580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -609,9 +609,9 @@ At PC = 0x4cc: ADDIU r29,r29,-24
 	interrupts: on -> off
 Time: 64, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(8741098)
+In mapcar, about to invoke 804b454(8d7f098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(8741580)
+In mapcar, about to invoke 804b454(8d7f580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -628,9 +628,9 @@ The corresponding TLBentry for Page 26 in TLB is 2
 	interrupts: on -> off
 Time: 65, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(8741098)
+In mapcar, about to invoke 804b454(8d7f098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(8741580)
+In mapcar, about to invoke 804b454(8d7f580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -645,9 +645,9 @@ Writing VA 0xd6c, size 4, value 0x8
 	interrupts: on -> off
 Time: 66, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(8741098)
+In mapcar, about to invoke 804b454(8d7f098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(8741580)
+In mapcar, about to invoke 804b454(8d7f580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -662,9 +662,9 @@ Writing VA 0xd68, size 4, value 0x0
 	interrupts: on -> off
 Time: 67, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(8741098)
+In mapcar, about to invoke 804b454(8d7f098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(8741580)
+In mapcar, about to invoke 804b454(8d7f580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -677,9 +677,9 @@ At PC = 0x4d8: JAL 48
 	interrupts: on -> off
 Time: 68, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(8741098)
+In mapcar, about to invoke 804b454(8d7f098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(8741580)
+In mapcar, about to invoke 804b454(8d7f580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -692,13 +692,389 @@ At PC = 0x4dc: ADDU r30,r29,r0
 	interrupts: on -> off
 Time: 69, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(8741098)
+In mapcar, about to invoke 804b454(8d7f098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(8741580)
+In mapcar, about to invoke 804b454(8d7f580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
 Reading VA 0xc0, size 4
 	Translate 0xc0, read: *** no valid TLB entry found for this virtual page 1!
 Exception: page fault/no TLB entry
-paging in: pid 1, phyPage -1, vpn 1
+paging in: pid 1, phyPage 0, vpn 1
+The corresponding TLBentry for Page 1 in TLB is 0 
+== Tick 70 ==
+	interrupts: on -> off
+Time: 70, interrupts off
+Pending interrupts:
+In mapcar, about to invoke 804b454(8d7f098)
+Interrupt handler timer, scheduled at 96
+In mapcar, about to invoke 804b454(8d7f580)
+Interrupt handler console read, scheduled at 110
+End of pending interrupts
+	interrupts: off -> on
+Reading VA 0xc0, size 4
+	Translate 0xc0, read: phys addr = 0x40
+	value read = 03e00008
+At PC = 0xc0: JR r0,r31
+
+== Tick 71 ==
+	interrupts: on -> off
+Time: 71, interrupts off
+Pending interrupts:
+In mapcar, about to invoke 804b454(8d7f098)
+Interrupt handler timer, scheduled at 96
+In mapcar, about to invoke 804b454(8d7f580)
+Interrupt handler console read, scheduled at 110
+End of pending interrupts
+	interrupts: off -> on
+Reading VA 0xc4, size 4
+	Translate 0xc4, read: phys addr = 0x44
+	value read = 00000000
+At PC = 0xc4: SLL r0,r0,0
+
+== Tick 72 ==
+	interrupts: on -> off
+Time: 72, interrupts off
+Pending interrupts:
+In mapcar, about to invoke 804b454(8d7f098)
+Interrupt handler timer, scheduled at 96
+In mapcar, about to invoke 804b454(8d7f580)
+Interrupt handler console read, scheduled at 110
+End of pending interrupts
+	interrupts: off -> on
+Reading VA 0x4e0, size 4
+	Translate 0x4e0, read: phys addr = 0x1e0
+	value read = 0c000008
+At PC = 0x4e0: JAL 8
+
+== Tick 73 ==
+	interrupts: on -> off
+Time: 73, interrupts off
+Pending interrupts:
+In mapcar, about to invoke 804b454(8d7f098)
+Interrupt handler timer, scheduled at 96
+In mapcar, about to invoke 804b454(8d7f580)
+Interrupt handler console read, scheduled at 110
+End of pending interrupts
+	interrupts: off -> on
+Reading VA 0x4e4, size 4
+	Translate 0x4e4, read: phys addr = 0x1e4
+	value read = 00002021
+At PC = 0x4e4: ADDU r4,r0,r0
+
+== Tick 74 ==
+	interrupts: on -> off
+Time: 74, interrupts off
+Pending interrupts:
+In mapcar, about to invoke 804b454(8d7f098)
+Interrupt handler timer, scheduled at 96
+In mapcar, about to invoke 804b454(8d7f580)
+Interrupt handler console read, scheduled at 110
+End of pending interrupts
+	interrupts: off -> on
+Reading VA 0x20, size 4
+	Translate 0x20, read: *** no valid TLB entry found for this virtual page 0!
+Exception: page fault/no TLB entry
+The corresponding TLBentry for Page 0 in TLB is 1 
+== Tick 75 ==
+	interrupts: on -> off
+Time: 75, interrupts off
+Pending interrupts:
+In mapcar, about to invoke 804b454(8d7f098)
+Interrupt handler timer, scheduled at 96
+In mapcar, about to invoke 804b454(8d7f580)
+Interrupt handler console read, scheduled at 110
+End of pending interrupts
+	interrupts: off -> on
+Reading VA 0x20, size 4
+	Translate 0x20, read: phys addr = 0x120
+	value read = 24020001
+At PC = 0x20: ADDIU r2,r0,1
+
+== Tick 76 ==
+	interrupts: on -> off
+Time: 76, interrupts off
+Pending interrupts:
+In mapcar, about to invoke 804b454(8d7f098)
+Interrupt handler timer, scheduled at 96
+In mapcar, about to invoke 804b454(8d7f580)
+Interrupt handler console read, scheduled at 110
+End of pending interrupts
+	interrupts: off -> on
+Reading VA 0x24, size 4
+	Translate 0x24, read: phys addr = 0x124
+	value read = 0000000c
+At PC = 0x24: SYSCALL
+Exception: syscall
+SyscallExit(), initiated by user program userprogram #1.
+	interrupts: on -> off
+Putting thread main #0 on ready list.
+thread userprogram releases semaphore done
+	interrupts: off -> on
+
+== Tick 86 ==
+	interrupts: on -> off
+Time: 86, interrupts off
+Pending interrupts:
+In mapcar, about to invoke 804b454(8d7f098)
+Interrupt handler timer, scheduled at 96
+In mapcar, about to invoke 804b454(8d7f580)
+Interrupt handler console read, scheduled at 110
+End of pending interrupts
+	interrupts: off -> on
+	interrupts: on -> off
+Finishing thread userprogram #1
+Sleeping thread userprogram #1
+Switching from thread userprogram #1 to thread main #0
+Now in thread main #0
+Deleting thread userprogram #1
+thread main acquires semaphore done
+	interrupts: off -> on
+
+== Tick 96 ==
+	interrupts: on -> off
+Time: 96, interrupts off
+Pending interrupts:
+In mapcar, about to invoke 804b454(8d7f098)
+Interrupt handler timer, scheduled at 96
+In mapcar, about to invoke 804b454(8d7f580)
+Interrupt handler console read, scheduled at 110
+End of pending interrupts
+Invoking interrupt handler for the timer at time 96
+Scheduling interrupt handler the timer at time = 105
+Time: 96, interrupts off
+Pending interrupts:
+In mapcar, about to invoke 804b454(8d7f728)
+Interrupt handler timer, scheduled at 105
+In mapcar, about to invoke 804b454(8d7f580)
+Interrupt handler console read, scheduled at 110
+End of pending interrupts
+	interrupts: off -> on
+	interrupts: on -> off
+Yielding thread main #0
+	interrupts: off -> on
+
+== Tick 106 ==
+	interrupts: on -> off
+Time: 106, interrupts off
+Pending interrupts:
+In mapcar, about to invoke 804b454(8d7f728)
+Interrupt handler timer, scheduled at 105
+In mapcar, about to invoke 804b454(8d7f580)
+Interrupt handler console read, scheduled at 110
+End of pending interrupts
+Invoking interrupt handler for the timer at time 105
+Scheduling interrupt handler the timer at time = 185
+Time: 106, interrupts off
+Pending interrupts:
+In mapcar, about to invoke 804b454(8d7f580)
+Interrupt handler console read, scheduled at 110
+In mapcar, about to invoke 804b454(8d7f098)
+Interrupt handler timer, scheduled at 185
+End of pending interrupts
+	interrupts: off -> on
+	interrupts: on -> off
+Yielding thread main #0
+	interrupts: off -> on
+
+== Tick 116 ==
+	interrupts: on -> off
+Time: 116, interrupts off
+Pending interrupts:
+In mapcar, about to invoke 804b454(8d7f580)
+Interrupt handler console read, scheduled at 110
+In mapcar, about to invoke 804b454(8d7f098)
+Interrupt handler timer, scheduled at 185
+End of pending interrupts
+Invoking interrupt handler for the console read at time 110
+Scheduling interrupt handler the console read at time = 216
+Time: 116, interrupts off
+Pending interrupts:
+In mapcar, about to invoke 804b454(8d7f098)
+Interrupt handler timer, scheduled at 185
+In mapcar, about to invoke 804b454(8d7f728)
+Interrupt handler console read, scheduled at 216
+End of pending interrupts
+	interrupts: off -> on
+
+== Tick 117 ==
+	interrupts: on -> off
+Time: 117, interrupts off
+Pending interrupts:
+In mapcar, about to invoke 804b454(8d7f098)
+Interrupt handler timer, scheduled at 185
+In mapcar, about to invoke 804b454(8d7f728)
+Interrupt handler console read, scheduled at 216
+End of pending interrupts
+	interrupts: off -> on
+Reading VA 0x48, size 4
+	Translate 0x48, read: *** no valid TLB entry found for this virtual page 0!
+Exception: page fault/no TLB entry
+paging in: pid 0, phyPage 0, vpn 0
+The corresponding TLBentry for Page 0 in TLB is 0 
+== Tick 118 ==
+	interrupts: on -> off
+Time: 118, interrupts off
+Pending interrupts:
+In mapcar, about to invoke 804b454(8d7f098)
+Interrupt handler timer, scheduled at 185
+In mapcar, about to invoke 804b454(8d7f728)
+Interrupt handler console read, scheduled at 216
+End of pending interrupts
+	interrupts: off -> on
+Reading VA 0x48, size 4
+	Translate 0x48, read: phys addr = 0x48
+	value read = 03e00008
+At PC = 0x48: JR r0,r31
+
+== Tick 119 ==
+	interrupts: on -> off
+Time: 119, interrupts off
+Pending interrupts:
+In mapcar, about to invoke 804b454(8d7f098)
+Interrupt handler timer, scheduled at 185
+In mapcar, about to invoke 804b454(8d7f728)
+Interrupt handler console read, scheduled at 216
+End of pending interrupts
+	interrupts: off -> on
+Reading VA 0x4c, size 4
+	Translate 0x4c, read: phys addr = 0x4c
+	value read = 00000000
+At PC = 0x4c: SLL r0,r0,0
+
+== Tick 120 ==
+	interrupts: on -> off
+Time: 120, interrupts off
+Pending interrupts:
+In mapcar, about to invoke 804b454(8d7f098)
+Interrupt handler timer, scheduled at 185
+In mapcar, about to invoke 804b454(8d7f728)
+Interrupt handler console read, scheduled at 216
+End of pending interrupts
+	interrupts: off -> on
+Reading VA 0x4fc, size 4
+	Translate 0x4fc, read: *** no valid TLB entry found for this virtual page 9!
+Exception: page fault/no TLB entry
+paging in: pid 0, phyPage 1, vpn 9
+The corresponding TLBentry for Page 9 in TLB is 1 
+== Tick 121 ==
+	interrupts: on -> off
+Time: 121, interrupts off
+Pending interrupts:
+In mapcar, about to invoke 804b454(8d7f098)
+Interrupt handler timer, scheduled at 185
+In mapcar, about to invoke 804b454(8d7f728)
+Interrupt handler console read, scheduled at 216
+End of pending interrupts
+	interrupts: off -> on
+Reading VA 0x4fc, size 4
+	Translate 0x4fc, read: phys addr = 0xfc
+	value read = 0c000004
+At PC = 0x4fc: JAL 4
+
+== Tick 122 ==
+	interrupts: on -> off
+Time: 122, interrupts off
+Pending interrupts:
+In mapcar, about to invoke 804b454(8d7f098)
+Interrupt handler timer, scheduled at 185
+In mapcar, about to invoke 804b454(8d7f728)
+Interrupt handler console read, scheduled at 216
+End of pending interrupts
+	interrupts: off -> on
+Reading VA 0x500, size 4
+	Translate 0x500, read: *** no valid TLB entry found for this virtual page 10!
+Exception: page fault/no TLB entry
+paging in: pid 0, phyPage 2, vpn 10
+The corresponding TLBentry for Page 10 in TLB is 2 
+== Tick 123 ==
+	interrupts: on -> off
+Time: 123, interrupts off
+Pending interrupts:
+In mapcar, about to invoke 804b454(8d7f098)
+Interrupt handler timer, scheduled at 185
+In mapcar, about to invoke 804b454(8d7f728)
+Interrupt handler console read, scheduled at 216
+End of pending interrupts
+	interrupts: off -> on
+Reading VA 0x500, size 4
+	Translate 0x500, read: phys addr = 0x100
+	value read = afc20014
+At PC = 0x500: SW r2,20(r30)
+Writing VA 0xd64, size 4, value 0x0
+	Translate 0xd64, write: *** no valid TLB entry found for this virtual page 26!
+Exception: page fault/no TLB entry
+paging in: pid 0, phyPage 3, vpn 26
+The corresponding TLBentry for Page 26 in TLB is 0 
+== Tick 124 ==
+	interrupts: on -> off
+Time: 124, interrupts off
+Pending interrupts:
+In mapcar, about to invoke 804b454(8d7f098)
+Interrupt handler timer, scheduled at 185
+In mapcar, about to invoke 804b454(8d7f728)
+Interrupt handler console read, scheduled at 216
+End of pending interrupts
+	interrupts: off -> on
+Reading VA 0x500, size 4
+	Translate 0x500, read: phys addr = 0x100
+	value read = afc20014
+At PC = 0x500: SW r2,20(r30)
+Writing VA 0xd64, size 4, value 0x0
+	Translate 0xd64, write: phys addr = 0x1e4
+
+== Tick 125 ==
+	interrupts: on -> off
+Time: 125, interrupts off
+Pending interrupts:
+In mapcar, about to invoke 804b454(8d7f098)
+Interrupt handler timer, scheduled at 185
+In mapcar, about to invoke 804b454(8d7f728)
+Interrupt handler console read, scheduled at 216
+End of pending interrupts
+	interrupts: off -> on
+Reading VA 0x10, size 4
+	Translate 0x10, read: *** no valid TLB entry found for this virtual page 0!
+Exception: page fault/no TLB entry
+The corresponding TLBentry for Page 0 in TLB is 1 
+== Tick 126 ==
+	interrupts: on -> off
+Time: 126, interrupts off
+Pending interrupts:
+In mapcar, about to invoke 804b454(8d7f098)
+Interrupt handler timer, scheduled at 185
+In mapcar, about to invoke 804b454(8d7f728)
+Interrupt handler console read, scheduled at 216
+End of pending interrupts
+	interrupts: off -> on
+Reading VA 0x10, size 4
+	Translate 0x10, read: phys addr = 0x10
+	value read = 24020000
+At PC = 0x10: ADDIU r2,r0,0
+
+== Tick 127 ==
+	interrupts: on -> off
+Time: 127, interrupts off
+Pending interrupts:
+In mapcar, about to invoke 804b454(8d7f098)
+Interrupt handler timer, scheduled at 185
+In mapcar, about to invoke 804b454(8d7f728)
+Interrupt handler console read, scheduled at 216
+End of pending interrupts
+	interrupts: off -> on
+Reading VA 0x14, size 4
+	Translate 0x14, read: phys addr = 0x14
+	value read = 0000000c
+At PC = 0x14: SYSCALL
+Exception: syscall
+SyscallHalt(), initiated by user program main #0.
+Machine halting!
+
+Ticks: total 127, idle 0, system 70, user 57
+Disk I/O: reads 0, writes 0
+Console I/O: reads 0, writes 0
+Paging: faults 14, outs 2, tlb miss: 19
+Network I/O: packets received 0, sent 0
+
+Cleaning up...
