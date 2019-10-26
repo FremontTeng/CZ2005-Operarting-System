@@ -5,7 +5,7 @@ Scheduling interrupt handler the timer at time = 96
 	interrupts: on -> off
 Time: 10, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 96
 End of pending interrupts
 	interrupts: off -> on
@@ -16,18 +16,30 @@ Starting thread "main" at time 10
 Reading VA 0x0, size 4
 	Translate 0x0, read: *** no valid TLB entry found for this virtual page 0!
 Exception: page fault/no TLB entry
-Before updating the IPT 0, pid, vpn, last used and valid is 0 0 0 0 
-paging in: pid 0, phyPage 0, vpn 0
-After updating the IPT 0, pid, vpn, last used and valid is 0 0 0 1 
-Before updating the TLB 0, vpn, phy and valid is 0 0 0 
-The corresponding TLBentry for Page 0 in TLB is 0 
+### Before updating the IPT 0, pid, vpn, last used and valid is 0 0 0 0 
+ ###### Before updating the IPT 1, pid, vpn, last used and valid is 0 0 0 0 
+ ###### Before updating the IPT 2, pid, vpn, last used and valid is 0 0 0 0 
+ ###### Before updating the IPT 3, pid, vpn, last used and valid is 0 0 0 0 
+ ###paging in: pid 0, phyPage 0, vpn 0
+
+### After updating the IPT 0, pid, vpn, last used and valid is 0 0 0 1 
+ ###### After updating the IPT 1, pid, vpn, last used and valid is 0 0 0 0 
+ ###### After updating the IPT 2, pid, vpn, last used and valid is 0 0 0 0 
+ ###### After updating the IPT 3, pid, vpn, last used and valid is 0 0 0 0 
+ ###### Before updating the TLB 0, vpn, phy and valid is 0 0 0 
+ ###### Before updating the TLB 1, vpn, phy and valid is 0 0 0 
+ ###### Before updating the TLB 2, vpn, phy and valid is 0 0 0 
+ ###The corresponding TLBentry for Page 0 in TLB is 0 ### After updating the TLB 0, vpn, phy and valid is 0 0 1 
+ ###### After updating the TLB 1, vpn, phy and valid is 0 0 0 
+ ###### After updating the TLB 2, vpn, phy and valid is 0 0 0 
+ ###
 == Tick 11 ==
 	interrupts: on -> off
 Time: 11, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(91cd580)
+In mapcar, about to invoke 804b454(8cf0580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -40,9 +52,9 @@ At PC = 0x0: JAL 307
 	interrupts: on -> off
 Time: 12, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(91cd580)
+In mapcar, about to invoke 804b454(8cf0580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -55,27 +67,39 @@ At PC = 0x4: SLL r0,r0,0
 	interrupts: on -> off
 Time: 13, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(91cd580)
+In mapcar, about to invoke 804b454(8cf0580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
 Reading VA 0x4cc, size 4
 	Translate 0x4cc, read: *** no valid TLB entry found for this virtual page 9!
 Exception: page fault/no TLB entry
-Before updating the IPT 1, pid, vpn, last used and valid is 0 0 0 0 
-paging in: pid 0, phyPage 1, vpn 9
-After updating the IPT 1, pid, vpn, last used and valid is 0 9 0 1 
-Before updating the TLB 1, vpn, phy and valid is 0 0 0 
-The corresponding TLBentry for Page 9 in TLB is 1 
+### Before updating the IPT 0, pid, vpn, last used and valid is 0 0 12 1 
+ ###### Before updating the IPT 1, pid, vpn, last used and valid is 0 0 0 0 
+ ###### Before updating the IPT 2, pid, vpn, last used and valid is 0 0 0 0 
+ ###### Before updating the IPT 3, pid, vpn, last used and valid is 0 0 0 0 
+ ###paging in: pid 0, phyPage 1, vpn 9
+
+### After updating the IPT 0, pid, vpn, last used and valid is 0 0 12 1 
+ ###### After updating the IPT 1, pid, vpn, last used and valid is 0 9 0 1 
+ ###### After updating the IPT 2, pid, vpn, last used and valid is 0 0 0 0 
+ ###### After updating the IPT 3, pid, vpn, last used and valid is 0 0 0 0 
+ ###### Before updating the TLB 0, vpn, phy and valid is 0 0 1 
+ ###### Before updating the TLB 1, vpn, phy and valid is 0 0 0 
+ ###### Before updating the TLB 2, vpn, phy and valid is 0 0 0 
+ ###The corresponding TLBentry for Page 9 in TLB is 1 ### After updating the TLB 0, vpn, phy and valid is 0 0 1 
+ ###### After updating the TLB 1, vpn, phy and valid is 9 1 1 
+ ###### After updating the TLB 2, vpn, phy and valid is 0 0 0 
+ ###
 == Tick 14 ==
 	interrupts: on -> off
 Time: 14, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(91cd580)
+In mapcar, about to invoke 804b454(8cf0580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -88,9 +112,9 @@ At PC = 0x4cc: ADDIU r29,r29,-32
 	interrupts: on -> off
 Time: 15, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(91cd580)
+In mapcar, about to invoke 804b454(8cf0580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -101,18 +125,30 @@ At PC = 0x4d0: SW r31,28(r29)
 Writing VA 0xd6c, size 4, value 0x8
 	Translate 0xd6c, write: *** no valid TLB entry found for this virtual page 26!
 Exception: page fault/no TLB entry
-Before updating the IPT 2, pid, vpn, last used and valid is 0 0 0 0 
-paging in: pid 0, phyPage 2, vpn 26
-After updating the IPT 2, pid, vpn, last used and valid is 0 26 0 1 
-Before updating the TLB 2, vpn, phy and valid is 0 0 0 
-The corresponding TLBentry for Page 26 in TLB is 2 
+### Before updating the IPT 0, pid, vpn, last used and valid is 0 0 12 1 
+ ###### Before updating the IPT 1, pid, vpn, last used and valid is 0 9 15 1 
+ ###### Before updating the IPT 2, pid, vpn, last used and valid is 0 0 0 0 
+ ###### Before updating the IPT 3, pid, vpn, last used and valid is 0 0 0 0 
+ ###paging in: pid 0, phyPage 2, vpn 26
+
+### After updating the IPT 0, pid, vpn, last used and valid is 0 0 12 1 
+ ###### After updating the IPT 1, pid, vpn, last used and valid is 0 9 15 1 
+ ###### After updating the IPT 2, pid, vpn, last used and valid is 0 26 0 1 
+ ###### After updating the IPT 3, pid, vpn, last used and valid is 0 0 0 0 
+ ###### Before updating the TLB 0, vpn, phy and valid is 0 0 1 
+ ###### Before updating the TLB 1, vpn, phy and valid is 9 1 1 
+ ###### Before updating the TLB 2, vpn, phy and valid is 0 0 0 
+ ###The corresponding TLBentry for Page 26 in TLB is 2 ### After updating the TLB 0, vpn, phy and valid is 0 0 1 
+ ###### After updating the TLB 1, vpn, phy and valid is 9 1 1 
+ ###### After updating the TLB 2, vpn, phy and valid is 26 2 1 
+ ###
 == Tick 16 ==
 	interrupts: on -> off
 Time: 16, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(91cd580)
+In mapcar, about to invoke 804b454(8cf0580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -127,9 +163,9 @@ Writing VA 0xd6c, size 4, value 0x8
 	interrupts: on -> off
 Time: 17, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(91cd580)
+In mapcar, about to invoke 804b454(8cf0580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -144,9 +180,9 @@ Writing VA 0xd68, size 4, value 0x0
 	interrupts: on -> off
 Time: 18, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(91cd580)
+In mapcar, about to invoke 804b454(8cf0580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -159,9 +195,9 @@ At PC = 0x4d8: JAL 48
 	interrupts: on -> off
 Time: 19, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(91cd580)
+In mapcar, about to invoke 804b454(8cf0580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -174,27 +210,39 @@ At PC = 0x4dc: ADDU r30,r29,r0
 	interrupts: on -> off
 Time: 20, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(91cd580)
+In mapcar, about to invoke 804b454(8cf0580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
 Reading VA 0xc0, size 4
 	Translate 0xc0, read: *** no valid TLB entry found for this virtual page 1!
 Exception: page fault/no TLB entry
-Before updating the IPT 3, pid, vpn, last used and valid is 0 0 0 0 
-paging in: pid 0, phyPage 3, vpn 1
-After updating the IPT 3, pid, vpn, last used and valid is 0 1 0 1 
-Before updating the TLB 0, vpn, phy and valid is 0 0 1 
-The corresponding TLBentry for Page 1 in TLB is 0 
+### Before updating the IPT 0, pid, vpn, last used and valid is 0 0 12 1 
+ ###### Before updating the IPT 1, pid, vpn, last used and valid is 0 9 19 1 
+ ###### Before updating the IPT 2, pid, vpn, last used and valid is 0 26 17 1 
+ ###### Before updating the IPT 3, pid, vpn, last used and valid is 0 0 0 0 
+ ###paging in: pid 0, phyPage 3, vpn 1
+
+### After updating the IPT 0, pid, vpn, last used and valid is 0 0 12 1 
+ ###### After updating the IPT 1, pid, vpn, last used and valid is 0 9 19 1 
+ ###### After updating the IPT 2, pid, vpn, last used and valid is 0 26 17 1 
+ ###### After updating the IPT 3, pid, vpn, last used and valid is 0 1 0 1 
+ ###### Before updating the TLB 0, vpn, phy and valid is 0 0 1 
+ ###### Before updating the TLB 1, vpn, phy and valid is 9 1 1 
+ ###### Before updating the TLB 2, vpn, phy and valid is 26 2 1 
+ ###The corresponding TLBentry for Page 1 in TLB is 0 ### After updating the TLB 0, vpn, phy and valid is 1 3 1 
+ ###### After updating the TLB 1, vpn, phy and valid is 9 1 1 
+ ###### After updating the TLB 2, vpn, phy and valid is 26 2 1 
+ ###
 == Tick 21 ==
 	interrupts: on -> off
 Time: 21, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(91cd580)
+In mapcar, about to invoke 804b454(8cf0580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -207,9 +255,9 @@ At PC = 0xc0: JR r0,r31
 	interrupts: on -> off
 Time: 22, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(91cd580)
+In mapcar, about to invoke 804b454(8cf0580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -222,9 +270,9 @@ At PC = 0xc4: SLL r0,r0,0
 	interrupts: on -> off
 Time: 23, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(91cd580)
+In mapcar, about to invoke 804b454(8cf0580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -238,9 +286,9 @@ Executing: LUI r4,0
 	interrupts: on -> off
 Time: 24, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(91cd580)
+In mapcar, about to invoke 804b454(8cf0580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -253,9 +301,9 @@ At PC = 0x4e4: JAL 12
 	interrupts: on -> off
 Time: 25, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(91cd580)
+In mapcar, about to invoke 804b454(8cf0580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -268,24 +316,29 @@ At PC = 0x4e8: ADDIU r4,r4,1320
 	interrupts: on -> off
 Time: 26, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(91cd580)
+In mapcar, about to invoke 804b454(8cf0580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
 Reading VA 0x30, size 4
 	Translate 0x30, read: *** no valid TLB entry found for this virtual page 0!
 Exception: page fault/no TLB entry
-Before updating the TLB 1, vpn, phy and valid is 9 1 1 
-The corresponding TLBentry for Page 0 in TLB is 1 
+### Before updating the TLB 0, vpn, phy and valid is 1 3 1 
+ ###### Before updating the TLB 1, vpn, phy and valid is 9 1 1 
+ ###### Before updating the TLB 2, vpn, phy and valid is 26 2 1 
+ ###The corresponding TLBentry for Page 0 in TLB is 1 ### After updating the TLB 0, vpn, phy and valid is 1 3 1 
+ ###### After updating the TLB 1, vpn, phy and valid is 0 0 1 
+ ###### After updating the TLB 2, vpn, phy and valid is 26 2 1 
+ ###
 == Tick 27 ==
 	interrupts: on -> off
 Time: 27, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(91cd580)
+In mapcar, about to invoke 804b454(8cf0580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -298,9 +351,9 @@ At PC = 0x30: ADDIU r2,r0,2
 	interrupts: on -> off
 Time: 28, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(91cd580)
+In mapcar, about to invoke 804b454(8cf0580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -311,12 +364,24 @@ At PC = 0x34: SYSCALL
 Exception: syscall
 SyscallExec(), initiated by user program main #0.
 	Translate 0x528, read: *** no valid TLB entry found for this virtual page 10!
-Before updating the IPT 2, pid, vpn, last used and valid is 0 26 17 1 
-paging out: pid 0, phyPage 2, vpn 26
+### Before updating the IPT 0, pid, vpn, last used and valid is 0 0 28 1 
+ ###### Before updating the IPT 1, pid, vpn, last used and valid is 0 9 25 1 
+ ###### Before updating the IPT 2, pid, vpn, last used and valid is 0 26 17 1 
+ ###### Before updating the IPT 3, pid, vpn, last used and valid is 0 1 22 1 
+ ###paging out: pid 0, phyPage 2, vpn 26
 paging in: pid 0, phyPage 2, vpn 10
-After updating the IPT 2, pid, vpn, last used and valid is 0 10 0 1 
-Before updating the TLB 2, vpn, phy and valid is 26 2 0 
-The corresponding TLBentry for Page 10 in TLB is 2 	Translate 0x528, read: phys addr = 0x128
+
+### After updating the IPT 0, pid, vpn, last used and valid is 0 0 28 1 
+ ###### After updating the IPT 1, pid, vpn, last used and valid is 0 9 25 1 
+ ###### After updating the IPT 2, pid, vpn, last used and valid is 0 10 0 1 
+ ###### After updating the IPT 3, pid, vpn, last used and valid is 0 1 22 1 
+ ###### Before updating the TLB 0, vpn, phy and valid is 1 3 1 
+ ###### Before updating the TLB 1, vpn, phy and valid is 0 0 1 
+ ###### Before updating the TLB 2, vpn, phy and valid is 26 2 0 
+ ###The corresponding TLBentry for Page 10 in TLB is 2 ### After updating the TLB 0, vpn, phy and valid is 1 3 1 
+ ###### After updating the TLB 1, vpn, phy and valid is 0 0 1 
+ ###### After updating the TLB 2, vpn, phy and valid is 10 2 1 
+ ###	Translate 0x528, read: phys addr = 0x128
 	Translate 0x529, read: phys addr = 0x129
 	Translate 0x52a, read: phys addr = 0x12a
 	Translate 0x52b, read: phys addr = 0x12b
@@ -349,7 +414,7 @@ The corresponding TLBentry for Page 10 in TLB is 2 	Translate 0x528, read: phys 
 	Translate 0x536, read: phys addr = 0x136
 	Translate 0x537, read: phys addr = 0x137
 Initializing address space, num pages 27, size 3456
-Forking thread userprogram #1 with func=0x804d2cf, arg=152885072, join=NO
+Forking thread userprogram #1 with func=0x804d2cf, arg=147785552, join=NO
 	interrupts: on -> off
 Putting thread userprogram #1 on ready list.
 	interrupts: off -> on
@@ -358,9 +423,9 @@ Putting thread userprogram #1 on ready list.
 	interrupts: on -> off
 Time: 38, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(91cd580)
+In mapcar, about to invoke 804b454(8cf0580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -369,9 +434,9 @@ End of pending interrupts
 	interrupts: on -> off
 Time: 39, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(91cd580)
+In mapcar, about to invoke 804b454(8cf0580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -384,9 +449,9 @@ At PC = 0x38: JR r0,r31
 	interrupts: on -> off
 Time: 40, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(91cd580)
+In mapcar, about to invoke 804b454(8cf0580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -399,24 +464,29 @@ At PC = 0x3c: SLL r0,r0,0
 	interrupts: on -> off
 Time: 41, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(91cd580)
+In mapcar, about to invoke 804b454(8cf0580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
 Reading VA 0x4ec, size 4
 	Translate 0x4ec, read: *** no valid TLB entry found for this virtual page 9!
 Exception: page fault/no TLB entry
-Before updating the TLB 0, vpn, phy and valid is 1 3 1 
-The corresponding TLBentry for Page 9 in TLB is 0 
+### Before updating the TLB 0, vpn, phy and valid is 1 3 1 
+ ###### Before updating the TLB 1, vpn, phy and valid is 0 0 1 
+ ###### Before updating the TLB 2, vpn, phy and valid is 10 2 1 
+ ###The corresponding TLBentry for Page 9 in TLB is 0 ### After updating the TLB 0, vpn, phy and valid is 9 1 1 
+ ###### After updating the TLB 1, vpn, phy and valid is 0 0 1 
+ ###### After updating the TLB 2, vpn, phy and valid is 10 2 1 
+ ###
 == Tick 42 ==
 	interrupts: on -> off
 Time: 42, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(91cd580)
+In mapcar, about to invoke 804b454(8cf0580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -427,18 +497,30 @@ At PC = 0x4ec: SW r2,16(r30)
 Writing VA 0xd60, size 4, value 0x1
 	Translate 0xd60, write: *** no valid TLB entry found for this virtual page 26!
 Exception: page fault/no TLB entry
-Before updating the IPT 3, pid, vpn, last used and valid is 0 1 22 1 
-paging in: pid 0, phyPage 3, vpn 26
-After updating the IPT 3, pid, vpn, last used and valid is 0 26 0 1 
-Before updating the TLB 1, vpn, phy and valid is 0 0 1 
-The corresponding TLBentry for Page 26 in TLB is 1 
+### Before updating the IPT 0, pid, vpn, last used and valid is 0 0 40 1 
+ ###### Before updating the IPT 1, pid, vpn, last used and valid is 0 9 42 1 
+ ###### Before updating the IPT 2, pid, vpn, last used and valid is 0 10 28 1 
+ ###### Before updating the IPT 3, pid, vpn, last used and valid is 0 1 22 1 
+ ###paging in: pid 0, phyPage 3, vpn 26
+
+### After updating the IPT 0, pid, vpn, last used and valid is 0 0 40 1 
+ ###### After updating the IPT 1, pid, vpn, last used and valid is 0 9 42 1 
+ ###### After updating the IPT 2, pid, vpn, last used and valid is 0 10 28 1 
+ ###### After updating the IPT 3, pid, vpn, last used and valid is 0 26 0 1 
+ ###### Before updating the TLB 0, vpn, phy and valid is 9 1 1 
+ ###### Before updating the TLB 1, vpn, phy and valid is 0 0 1 
+ ###### Before updating the TLB 2, vpn, phy and valid is 10 2 1 
+ ###The corresponding TLBentry for Page 26 in TLB is 1 ### After updating the TLB 0, vpn, phy and valid is 9 1 1 
+ ###### After updating the TLB 1, vpn, phy and valid is 26 3 1 
+ ###### After updating the TLB 2, vpn, phy and valid is 10 2 1 
+ ###
 == Tick 43 ==
 	interrupts: on -> off
 Time: 43, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(91cd580)
+In mapcar, about to invoke 804b454(8cf0580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -453,9 +535,9 @@ Writing VA 0xd60, size 4, value 0x1
 	interrupts: on -> off
 Time: 44, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(91cd580)
+In mapcar, about to invoke 804b454(8cf0580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -471,9 +553,9 @@ Reading VA 0xd60, size 4
 	interrupts: on -> off
 Time: 45, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(91cd580)
+In mapcar, about to invoke 804b454(8cf0580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -486,9 +568,9 @@ At PC = 0x4f4: JAL 16
 	interrupts: on -> off
 Time: 46, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(91cd580)
+In mapcar, about to invoke 804b454(8cf0580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -501,24 +583,29 @@ At PC = 0x4f8: SLL r0,r0,0
 	interrupts: on -> off
 Time: 47, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(91cd580)
+In mapcar, about to invoke 804b454(8cf0580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
 Reading VA 0x40, size 4
 	Translate 0x40, read: *** no valid TLB entry found for this virtual page 0!
 Exception: page fault/no TLB entry
-Before updating the TLB 2, vpn, phy and valid is 10 2 1 
-The corresponding TLBentry for Page 0 in TLB is 2 
+### Before updating the TLB 0, vpn, phy and valid is 9 1 1 
+ ###### Before updating the TLB 1, vpn, phy and valid is 26 3 1 
+ ###### Before updating the TLB 2, vpn, phy and valid is 10 2 1 
+ ###The corresponding TLBentry for Page 0 in TLB is 2 ### After updating the TLB 0, vpn, phy and valid is 9 1 1 
+ ###### After updating the TLB 1, vpn, phy and valid is 26 3 1 
+ ###### After updating the TLB 2, vpn, phy and valid is 0 0 1 
+ ###
 == Tick 48 ==
 	interrupts: on -> off
 Time: 48, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(91cd580)
+In mapcar, about to invoke 804b454(8cf0580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -531,9 +618,9 @@ At PC = 0x40: ADDIU r2,r0,3
 	interrupts: on -> off
 Time: 49, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(91cd580)
+In mapcar, about to invoke 804b454(8cf0580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -552,9 +639,9 @@ Switching from thread main #0 to thread userprogram #1
 	interrupts: on -> off
 Time: 59, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(91cd580)
+In mapcar, about to invoke 804b454(8cf0580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -563,18 +650,30 @@ Starting thread "userprogram" at time 59
 Reading VA 0x0, size 4
 	Translate 0x0, read: *** no valid TLB entry found for this virtual page 0!
 Exception: page fault/no TLB entry
-Before updating the IPT 2, pid, vpn, last used and valid is 0 10 28 1 
-paging in: pid 1, phyPage 2, vpn 0
-After updating the IPT 2, pid, vpn, last used and valid is 1 0 0 1 
-Before updating the TLB 0, vpn, phy and valid is 9 1 0 
-The corresponding TLBentry for Page 0 in TLB is 0 
+### Before updating the IPT 0, pid, vpn, last used and valid is 0 0 49 1 
+ ###### Before updating the IPT 1, pid, vpn, last used and valid is 0 9 46 1 
+ ###### Before updating the IPT 2, pid, vpn, last used and valid is 0 10 28 1 
+ ###### Before updating the IPT 3, pid, vpn, last used and valid is 0 26 44 1 
+ ###paging in: pid 1, phyPage 2, vpn 0
+
+### After updating the IPT 0, pid, vpn, last used and valid is 0 0 49 1 
+ ###### After updating the IPT 1, pid, vpn, last used and valid is 0 9 46 1 
+ ###### After updating the IPT 2, pid, vpn, last used and valid is 1 0 0 1 
+ ###### After updating the IPT 3, pid, vpn, last used and valid is 0 26 44 1 
+ ###### Before updating the TLB 0, vpn, phy and valid is 9 1 0 
+ ###### Before updating the TLB 1, vpn, phy and valid is 26 3 0 
+ ###### Before updating the TLB 2, vpn, phy and valid is 0 0 0 
+ ###The corresponding TLBentry for Page 0 in TLB is 0 ### After updating the TLB 0, vpn, phy and valid is 0 2 1 
+ ###### After updating the TLB 1, vpn, phy and valid is 26 3 0 
+ ###### After updating the TLB 2, vpn, phy and valid is 0 0 0 
+ ###
 == Tick 60 ==
 	interrupts: on -> off
 Time: 60, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(91cd580)
+In mapcar, about to invoke 804b454(8cf0580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -587,9 +686,9 @@ At PC = 0x0: JAL 307
 	interrupts: on -> off
 Time: 61, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(91cd580)
+In mapcar, about to invoke 804b454(8cf0580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -602,28 +701,40 @@ At PC = 0x4: SLL r0,r0,0
 	interrupts: on -> off
 Time: 62, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(91cd580)
+In mapcar, about to invoke 804b454(8cf0580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
 Reading VA 0x4cc, size 4
 	Translate 0x4cc, read: *** no valid TLB entry found for this virtual page 9!
 Exception: page fault/no TLB entry
-Before updating the IPT 3, pid, vpn, last used and valid is 0 26 44 1 
-paging out: pid 0, phyPage 3, vpn 26
+### Before updating the IPT 0, pid, vpn, last used and valid is 0 0 49 1 
+ ###### Before updating the IPT 1, pid, vpn, last used and valid is 0 9 46 1 
+ ###### Before updating the IPT 2, pid, vpn, last used and valid is 1 0 61 1 
+ ###### Before updating the IPT 3, pid, vpn, last used and valid is 0 26 44 1 
+ ###paging out: pid 0, phyPage 3, vpn 26
 paging in: pid 1, phyPage 3, vpn 9
-After updating the IPT 3, pid, vpn, last used and valid is 1 9 0 1 
-Before updating the TLB 1, vpn, phy and valid is 26 3 0 
-The corresponding TLBentry for Page 9 in TLB is 1 
+
+### After updating the IPT 0, pid, vpn, last used and valid is 0 0 49 1 
+ ###### After updating the IPT 1, pid, vpn, last used and valid is 0 9 46 1 
+ ###### After updating the IPT 2, pid, vpn, last used and valid is 1 0 61 1 
+ ###### After updating the IPT 3, pid, vpn, last used and valid is 1 9 0 1 
+ ###### Before updating the TLB 0, vpn, phy and valid is 0 2 1 
+ ###### Before updating the TLB 1, vpn, phy and valid is 26 3 0 
+ ###### Before updating the TLB 2, vpn, phy and valid is 0 0 0 
+ ###The corresponding TLBentry for Page 9 in TLB is 1 ### After updating the TLB 0, vpn, phy and valid is 0 2 1 
+ ###### After updating the TLB 1, vpn, phy and valid is 9 3 1 
+ ###### After updating the TLB 2, vpn, phy and valid is 0 0 0 
+ ###
 == Tick 63 ==
 	interrupts: on -> off
 Time: 63, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(91cd580)
+In mapcar, about to invoke 804b454(8cf0580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -636,9 +747,9 @@ At PC = 0x4cc: ADDIU r29,r29,-24
 	interrupts: on -> off
 Time: 64, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(91cd580)
+In mapcar, about to invoke 804b454(8cf0580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -649,18 +760,30 @@ At PC = 0x4d0: SW r31,20(r29)
 Writing VA 0xd6c, size 4, value 0x8
 	Translate 0xd6c, write: *** no valid TLB entry found for this virtual page 26!
 Exception: page fault/no TLB entry
-Before updating the IPT 1, pid, vpn, last used and valid is 0 9 46 1 
-paging in: pid 1, phyPage 1, vpn 26
-After updating the IPT 1, pid, vpn, last used and valid is 1 26 0 1 
-Before updating the TLB 2, vpn, phy and valid is 0 0 0 
-The corresponding TLBentry for Page 26 in TLB is 2 
+### Before updating the IPT 0, pid, vpn, last used and valid is 0 0 49 1 
+ ###### Before updating the IPT 1, pid, vpn, last used and valid is 0 9 46 1 
+ ###### Before updating the IPT 2, pid, vpn, last used and valid is 1 0 61 1 
+ ###### Before updating the IPT 3, pid, vpn, last used and valid is 1 9 64 1 
+ ###paging in: pid 1, phyPage 1, vpn 26
+
+### After updating the IPT 0, pid, vpn, last used and valid is 0 0 49 1 
+ ###### After updating the IPT 1, pid, vpn, last used and valid is 1 26 0 1 
+ ###### After updating the IPT 2, pid, vpn, last used and valid is 1 0 61 1 
+ ###### After updating the IPT 3, pid, vpn, last used and valid is 1 9 64 1 
+ ###### Before updating the TLB 0, vpn, phy and valid is 0 2 1 
+ ###### Before updating the TLB 1, vpn, phy and valid is 9 3 1 
+ ###### Before updating the TLB 2, vpn, phy and valid is 0 0 0 
+ ###The corresponding TLBentry for Page 26 in TLB is 2 ### After updating the TLB 0, vpn, phy and valid is 0 2 1 
+ ###### After updating the TLB 1, vpn, phy and valid is 9 3 1 
+ ###### After updating the TLB 2, vpn, phy and valid is 26 1 1 
+ ###
 == Tick 65 ==
 	interrupts: on -> off
 Time: 65, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(91cd580)
+In mapcar, about to invoke 804b454(8cf0580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -675,9 +798,9 @@ Writing VA 0xd6c, size 4, value 0x8
 	interrupts: on -> off
 Time: 66, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(91cd580)
+In mapcar, about to invoke 804b454(8cf0580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -692,9 +815,9 @@ Writing VA 0xd68, size 4, value 0x0
 	interrupts: on -> off
 Time: 67, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(91cd580)
+In mapcar, about to invoke 804b454(8cf0580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -707,9 +830,9 @@ At PC = 0x4d8: JAL 48
 	interrupts: on -> off
 Time: 68, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(91cd580)
+In mapcar, about to invoke 804b454(8cf0580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -722,27 +845,39 @@ At PC = 0x4dc: ADDU r30,r29,r0
 	interrupts: on -> off
 Time: 69, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(91cd580)
+In mapcar, about to invoke 804b454(8cf0580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
 Reading VA 0xc0, size 4
 	Translate 0xc0, read: *** no valid TLB entry found for this virtual page 1!
 Exception: page fault/no TLB entry
-Before updating the IPT 0, pid, vpn, last used and valid is 0 0 49 1 
-paging in: pid 1, phyPage 0, vpn 1
-After updating the IPT 0, pid, vpn, last used and valid is 1 1 0 1 
-Before updating the TLB 0, vpn, phy and valid is 0 2 1 
-The corresponding TLBentry for Page 1 in TLB is 0 
+### Before updating the IPT 0, pid, vpn, last used and valid is 0 0 49 1 
+ ###### Before updating the IPT 1, pid, vpn, last used and valid is 1 26 66 1 
+ ###### Before updating the IPT 2, pid, vpn, last used and valid is 1 0 61 1 
+ ###### Before updating the IPT 3, pid, vpn, last used and valid is 1 9 68 1 
+ ###paging in: pid 1, phyPage 0, vpn 1
+
+### After updating the IPT 0, pid, vpn, last used and valid is 1 1 0 1 
+ ###### After updating the IPT 1, pid, vpn, last used and valid is 1 26 66 1 
+ ###### After updating the IPT 2, pid, vpn, last used and valid is 1 0 61 1 
+ ###### After updating the IPT 3, pid, vpn, last used and valid is 1 9 68 1 
+ ###### Before updating the TLB 0, vpn, phy and valid is 0 2 1 
+ ###### Before updating the TLB 1, vpn, phy and valid is 9 3 1 
+ ###### Before updating the TLB 2, vpn, phy and valid is 26 1 1 
+ ###The corresponding TLBentry for Page 1 in TLB is 0 ### After updating the TLB 0, vpn, phy and valid is 1 0 1 
+ ###### After updating the TLB 1, vpn, phy and valid is 9 3 1 
+ ###### After updating the TLB 2, vpn, phy and valid is 26 1 1 
+ ###
 == Tick 70 ==
 	interrupts: on -> off
 Time: 70, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(91cd580)
+In mapcar, about to invoke 804b454(8cf0580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -755,9 +890,9 @@ At PC = 0xc0: JR r0,r31
 	interrupts: on -> off
 Time: 71, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(91cd580)
+In mapcar, about to invoke 804b454(8cf0580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -770,9 +905,9 @@ At PC = 0xc4: SLL r0,r0,0
 	interrupts: on -> off
 Time: 72, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(91cd580)
+In mapcar, about to invoke 804b454(8cf0580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -785,9 +920,9 @@ At PC = 0x4e0: JAL 8
 	interrupts: on -> off
 Time: 73, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(91cd580)
+In mapcar, about to invoke 804b454(8cf0580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -800,24 +935,29 @@ At PC = 0x4e4: ADDU r4,r0,r0
 	interrupts: on -> off
 Time: 74, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(91cd580)
+In mapcar, about to invoke 804b454(8cf0580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
 Reading VA 0x20, size 4
 	Translate 0x20, read: *** no valid TLB entry found for this virtual page 0!
 Exception: page fault/no TLB entry
-Before updating the TLB 1, vpn, phy and valid is 9 3 1 
-The corresponding TLBentry for Page 0 in TLB is 1 
+### Before updating the TLB 0, vpn, phy and valid is 1 0 1 
+ ###### Before updating the TLB 1, vpn, phy and valid is 9 3 1 
+ ###### Before updating the TLB 2, vpn, phy and valid is 26 1 1 
+ ###The corresponding TLBentry for Page 0 in TLB is 1 ### After updating the TLB 0, vpn, phy and valid is 1 0 1 
+ ###### After updating the TLB 1, vpn, phy and valid is 0 2 1 
+ ###### After updating the TLB 2, vpn, phy and valid is 26 1 1 
+ ###
 == Tick 75 ==
 	interrupts: on -> off
 Time: 75, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(91cd580)
+In mapcar, about to invoke 804b454(8cf0580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -830,9 +970,9 @@ At PC = 0x20: ADDIU r2,r0,1
 	interrupts: on -> off
 Time: 76, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(91cd580)
+In mapcar, about to invoke 804b454(8cf0580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -851,9 +991,9 @@ thread userprogram releases semaphore done
 	interrupts: on -> off
 Time: 86, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(91cd580)
+In mapcar, about to invoke 804b454(8cf0580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -870,18 +1010,18 @@ thread main acquires semaphore done
 	interrupts: on -> off
 Time: 96, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 96
-In mapcar, about to invoke 804b454(91cd580)
+In mapcar, about to invoke 804b454(8cf0580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 Invoking interrupt handler for the timer at time 96
 Scheduling interrupt handler the timer at time = 105
 Time: 96, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd728)
+In mapcar, about to invoke 804b454(8cf0728)
 Interrupt handler timer, scheduled at 105
-In mapcar, about to invoke 804b454(91cd580)
+In mapcar, about to invoke 804b454(8cf0580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 	interrupts: off -> on
@@ -893,18 +1033,18 @@ Yielding thread main #0
 	interrupts: on -> off
 Time: 106, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd728)
+In mapcar, about to invoke 804b454(8cf0728)
 Interrupt handler timer, scheduled at 105
-In mapcar, about to invoke 804b454(91cd580)
+In mapcar, about to invoke 804b454(8cf0580)
 Interrupt handler console read, scheduled at 110
 End of pending interrupts
 Invoking interrupt handler for the timer at time 105
 Scheduling interrupt handler the timer at time = 185
 Time: 106, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd580)
+In mapcar, about to invoke 804b454(8cf0580)
 Interrupt handler console read, scheduled at 110
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 185
 End of pending interrupts
 	interrupts: off -> on
@@ -916,18 +1056,18 @@ Yielding thread main #0
 	interrupts: on -> off
 Time: 116, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd580)
+In mapcar, about to invoke 804b454(8cf0580)
 Interrupt handler console read, scheduled at 110
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 185
 End of pending interrupts
 Invoking interrupt handler for the console read at time 110
 Scheduling interrupt handler the console read at time = 216
 Time: 116, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 185
-In mapcar, about to invoke 804b454(91cd728)
+In mapcar, about to invoke 804b454(8cf0728)
 Interrupt handler console read, scheduled at 216
 End of pending interrupts
 	interrupts: off -> on
@@ -936,27 +1076,39 @@ End of pending interrupts
 	interrupts: on -> off
 Time: 117, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 185
-In mapcar, about to invoke 804b454(91cd728)
+In mapcar, about to invoke 804b454(8cf0728)
 Interrupt handler console read, scheduled at 216
 End of pending interrupts
 	interrupts: off -> on
 Reading VA 0x48, size 4
 	Translate 0x48, read: *** no valid TLB entry found for this virtual page 0!
 Exception: page fault/no TLB entry
-Before updating the IPT 0, pid, vpn, last used and valid is 1 1 71 0 
-paging in: pid 0, phyPage 0, vpn 0
-After updating the IPT 0, pid, vpn, last used and valid is 0 0 0 1 
-Before updating the TLB 0, vpn, phy and valid is 1 0 0 
-The corresponding TLBentry for Page 0 in TLB is 0 
+### Before updating the IPT 0, pid, vpn, last used and valid is 1 1 71 0 
+ ###### Before updating the IPT 1, pid, vpn, last used and valid is 1 26 66 0 
+ ###### Before updating the IPT 2, pid, vpn, last used and valid is 1 0 76 0 
+ ###### Before updating the IPT 3, pid, vpn, last used and valid is 1 9 73 0 
+ ###paging in: pid 0, phyPage 0, vpn 0
+
+### After updating the IPT 0, pid, vpn, last used and valid is 0 0 0 1 
+ ###### After updating the IPT 1, pid, vpn, last used and valid is 1 26 66 0 
+ ###### After updating the IPT 2, pid, vpn, last used and valid is 1 0 76 0 
+ ###### After updating the IPT 3, pid, vpn, last used and valid is 1 9 73 0 
+ ###### Before updating the TLB 0, vpn, phy and valid is 1 0 0 
+ ###### Before updating the TLB 1, vpn, phy and valid is 0 2 0 
+ ###### Before updating the TLB 2, vpn, phy and valid is 26 1 0 
+ ###The corresponding TLBentry for Page 0 in TLB is 0 ### After updating the TLB 0, vpn, phy and valid is 0 0 1 
+ ###### After updating the TLB 1, vpn, phy and valid is 0 2 0 
+ ###### After updating the TLB 2, vpn, phy and valid is 26 1 0 
+ ###
 == Tick 118 ==
 	interrupts: on -> off
 Time: 118, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 185
-In mapcar, about to invoke 804b454(91cd728)
+In mapcar, about to invoke 804b454(8cf0728)
 Interrupt handler console read, scheduled at 216
 End of pending interrupts
 	interrupts: off -> on
@@ -969,9 +1121,9 @@ At PC = 0x48: JR r0,r31
 	interrupts: on -> off
 Time: 119, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 185
-In mapcar, about to invoke 804b454(91cd728)
+In mapcar, about to invoke 804b454(8cf0728)
 Interrupt handler console read, scheduled at 216
 End of pending interrupts
 	interrupts: off -> on
@@ -984,27 +1136,39 @@ At PC = 0x4c: SLL r0,r0,0
 	interrupts: on -> off
 Time: 120, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 185
-In mapcar, about to invoke 804b454(91cd728)
+In mapcar, about to invoke 804b454(8cf0728)
 Interrupt handler console read, scheduled at 216
 End of pending interrupts
 	interrupts: off -> on
 Reading VA 0x4fc, size 4
 	Translate 0x4fc, read: *** no valid TLB entry found for this virtual page 9!
 Exception: page fault/no TLB entry
-Before updating the IPT 1, pid, vpn, last used and valid is 1 26 66 0 
-paging in: pid 0, phyPage 1, vpn 9
-After updating the IPT 1, pid, vpn, last used and valid is 0 9 0 1 
-Before updating the TLB 1, vpn, phy and valid is 0 2 0 
-The corresponding TLBentry for Page 9 in TLB is 1 
+### Before updating the IPT 0, pid, vpn, last used and valid is 0 0 119 1 
+ ###### Before updating the IPT 1, pid, vpn, last used and valid is 1 26 66 0 
+ ###### Before updating the IPT 2, pid, vpn, last used and valid is 1 0 76 0 
+ ###### Before updating the IPT 3, pid, vpn, last used and valid is 1 9 73 0 
+ ###paging in: pid 0, phyPage 1, vpn 9
+
+### After updating the IPT 0, pid, vpn, last used and valid is 0 0 119 1 
+ ###### After updating the IPT 1, pid, vpn, last used and valid is 0 9 0 1 
+ ###### After updating the IPT 2, pid, vpn, last used and valid is 1 0 76 0 
+ ###### After updating the IPT 3, pid, vpn, last used and valid is 1 9 73 0 
+ ###### Before updating the TLB 0, vpn, phy and valid is 0 0 1 
+ ###### Before updating the TLB 1, vpn, phy and valid is 0 2 0 
+ ###### Before updating the TLB 2, vpn, phy and valid is 26 1 0 
+ ###The corresponding TLBentry for Page 9 in TLB is 1 ### After updating the TLB 0, vpn, phy and valid is 0 0 1 
+ ###### After updating the TLB 1, vpn, phy and valid is 9 1 1 
+ ###### After updating the TLB 2, vpn, phy and valid is 26 1 0 
+ ###
 == Tick 121 ==
 	interrupts: on -> off
 Time: 121, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 185
-In mapcar, about to invoke 804b454(91cd728)
+In mapcar, about to invoke 804b454(8cf0728)
 Interrupt handler console read, scheduled at 216
 End of pending interrupts
 	interrupts: off -> on
@@ -1017,27 +1181,39 @@ At PC = 0x4fc: JAL 4
 	interrupts: on -> off
 Time: 122, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 185
-In mapcar, about to invoke 804b454(91cd728)
+In mapcar, about to invoke 804b454(8cf0728)
 Interrupt handler console read, scheduled at 216
 End of pending interrupts
 	interrupts: off -> on
 Reading VA 0x500, size 4
 	Translate 0x500, read: *** no valid TLB entry found for this virtual page 10!
 Exception: page fault/no TLB entry
-Before updating the IPT 2, pid, vpn, last used and valid is 1 0 76 0 
-paging in: pid 0, phyPage 2, vpn 10
-After updating the IPT 2, pid, vpn, last used and valid is 0 10 0 1 
-Before updating the TLB 2, vpn, phy and valid is 26 1 0 
-The corresponding TLBentry for Page 10 in TLB is 2 
+### Before updating the IPT 0, pid, vpn, last used and valid is 0 0 119 1 
+ ###### Before updating the IPT 1, pid, vpn, last used and valid is 0 9 121 1 
+ ###### Before updating the IPT 2, pid, vpn, last used and valid is 1 0 76 0 
+ ###### Before updating the IPT 3, pid, vpn, last used and valid is 1 9 73 0 
+ ###paging in: pid 0, phyPage 2, vpn 10
+
+### After updating the IPT 0, pid, vpn, last used and valid is 0 0 119 1 
+ ###### After updating the IPT 1, pid, vpn, last used and valid is 0 9 121 1 
+ ###### After updating the IPT 2, pid, vpn, last used and valid is 0 10 0 1 
+ ###### After updating the IPT 3, pid, vpn, last used and valid is 1 9 73 0 
+ ###### Before updating the TLB 0, vpn, phy and valid is 0 0 1 
+ ###### Before updating the TLB 1, vpn, phy and valid is 9 1 1 
+ ###### Before updating the TLB 2, vpn, phy and valid is 26 1 0 
+ ###The corresponding TLBentry for Page 10 in TLB is 2 ### After updating the TLB 0, vpn, phy and valid is 0 0 1 
+ ###### After updating the TLB 1, vpn, phy and valid is 9 1 1 
+ ###### After updating the TLB 2, vpn, phy and valid is 10 2 1 
+ ###
 == Tick 123 ==
 	interrupts: on -> off
 Time: 123, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 185
-In mapcar, about to invoke 804b454(91cd728)
+In mapcar, about to invoke 804b454(8cf0728)
 Interrupt handler console read, scheduled at 216
 End of pending interrupts
 	interrupts: off -> on
@@ -1048,18 +1224,30 @@ At PC = 0x500: SW r2,20(r30)
 Writing VA 0xd64, size 4, value 0x0
 	Translate 0xd64, write: *** no valid TLB entry found for this virtual page 26!
 Exception: page fault/no TLB entry
-Before updating the IPT 3, pid, vpn, last used and valid is 1 9 73 0 
-paging in: pid 0, phyPage 3, vpn 26
-After updating the IPT 3, pid, vpn, last used and valid is 0 26 0 1 
-Before updating the TLB 0, vpn, phy and valid is 0 0 1 
-The corresponding TLBentry for Page 26 in TLB is 0 
+### Before updating the IPT 0, pid, vpn, last used and valid is 0 0 119 1 
+ ###### Before updating the IPT 1, pid, vpn, last used and valid is 0 9 121 1 
+ ###### Before updating the IPT 2, pid, vpn, last used and valid is 0 10 123 1 
+ ###### Before updating the IPT 3, pid, vpn, last used and valid is 1 9 73 0 
+ ###paging in: pid 0, phyPage 3, vpn 26
+
+### After updating the IPT 0, pid, vpn, last used and valid is 0 0 119 1 
+ ###### After updating the IPT 1, pid, vpn, last used and valid is 0 9 121 1 
+ ###### After updating the IPT 2, pid, vpn, last used and valid is 0 10 123 1 
+ ###### After updating the IPT 3, pid, vpn, last used and valid is 0 26 0 1 
+ ###### Before updating the TLB 0, vpn, phy and valid is 0 0 1 
+ ###### Before updating the TLB 1, vpn, phy and valid is 9 1 1 
+ ###### Before updating the TLB 2, vpn, phy and valid is 10 2 1 
+ ###The corresponding TLBentry for Page 26 in TLB is 0 ### After updating the TLB 0, vpn, phy and valid is 26 3 1 
+ ###### After updating the TLB 1, vpn, phy and valid is 9 1 1 
+ ###### After updating the TLB 2, vpn, phy and valid is 10 2 1 
+ ###
 == Tick 124 ==
 	interrupts: on -> off
 Time: 124, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 185
-In mapcar, about to invoke 804b454(91cd728)
+In mapcar, about to invoke 804b454(8cf0728)
 Interrupt handler console read, scheduled at 216
 End of pending interrupts
 	interrupts: off -> on
@@ -1074,24 +1262,29 @@ Writing VA 0xd64, size 4, value 0x0
 	interrupts: on -> off
 Time: 125, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 185
-In mapcar, about to invoke 804b454(91cd728)
+In mapcar, about to invoke 804b454(8cf0728)
 Interrupt handler console read, scheduled at 216
 End of pending interrupts
 	interrupts: off -> on
 Reading VA 0x10, size 4
 	Translate 0x10, read: *** no valid TLB entry found for this virtual page 0!
 Exception: page fault/no TLB entry
-Before updating the TLB 1, vpn, phy and valid is 9 1 1 
-The corresponding TLBentry for Page 0 in TLB is 1 
+### Before updating the TLB 0, vpn, phy and valid is 26 3 1 
+ ###### Before updating the TLB 1, vpn, phy and valid is 9 1 1 
+ ###### Before updating the TLB 2, vpn, phy and valid is 10 2 1 
+ ###The corresponding TLBentry for Page 0 in TLB is 1 ### After updating the TLB 0, vpn, phy and valid is 26 3 1 
+ ###### After updating the TLB 1, vpn, phy and valid is 0 0 1 
+ ###### After updating the TLB 2, vpn, phy and valid is 10 2 1 
+ ###
 == Tick 126 ==
 	interrupts: on -> off
 Time: 126, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 185
-In mapcar, about to invoke 804b454(91cd728)
+In mapcar, about to invoke 804b454(8cf0728)
 Interrupt handler console read, scheduled at 216
 End of pending interrupts
 	interrupts: off -> on
@@ -1104,9 +1297,9 @@ At PC = 0x10: ADDIU r2,r0,0
 	interrupts: on -> off
 Time: 127, interrupts off
 Pending interrupts:
-In mapcar, about to invoke 804b454(91cd098)
+In mapcar, about to invoke 804b454(8cf0098)
 Interrupt handler timer, scheduled at 185
-In mapcar, about to invoke 804b454(91cd728)
+In mapcar, about to invoke 804b454(8cf0728)
 Interrupt handler console read, scheduled at 216
 End of pending interrupts
 	interrupts: off -> on
