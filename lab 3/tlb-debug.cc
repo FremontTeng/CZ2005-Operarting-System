@@ -119,7 +119,9 @@ Simple FIFO: if an entry is just inserted, then the entry next to it is the olde
 
 //End of Code	
 
-DEBUG('p', "Before updating the TLB %i, vpn, phy and valid is %i %i %i \n", i, machine->tlb[i].virtualPage, machine->tlb[i].physicalPage, machine->tlb[i].valid);
+DEBUG('p', "### Before updating the TLB %i, vpn, phy and valid is %i %i %i \n ###", 0, machine->tlb[0].virtualPage, machine->tlb[0].physicalPage, machine->tlb[0].valid);
+DEBUG('p', "### Before updating the TLB %i, vpn, phy and valid is %i %i %i \n ###", 1, machine->tlb[1].virtualPage, machine->tlb[1].physicalPage, machine->tlb[1].valid);
+DEBUG('p', "### Before updating the TLB %i, vpn, phy and valid is %i %i %i \n ###", 2, machine->tlb[2].virtualPage, machine->tlb[2].physicalPage, machine->tlb[2].valid);
 
   // copy dirty data to memoryTable
   if(machine->tlb[i].valid){
@@ -144,7 +146,11 @@ DEBUG('p', "Before updating the TLB %i, vpn, phy and valid is %i %i %i \n", i, m
   
   //increase the number of tlb misses
   stats->numTlbMisses++;
-  
+ 
+DEBUG('p', "### After updating the TLB %i, vpn, phy and valid is %i %i %i \n ###", 0, machine->tlb[0].virtualPage, machine->tlb[0].physicalPage, machine->tlb[0].valid);
+DEBUG('p', "### After updating the TLB %i, vpn, phy and valid is %i %i %i \n ###", 1, machine->tlb[1].virtualPage, machine->tlb[1].physicalPage, machine->tlb[1].valid);
+DEBUG('p', "### After updating the TLB %i, vpn, phy and valid is %i %i %i \n ###", 2, machine->tlb[2].virtualPage, machine->tlb[2].physicalPage, machine->tlb[2].valid);
+ 
 }
 
 //----------------------------------------------------------------------
@@ -162,7 +168,11 @@ int PageOutPageIn(int vpn)
   //call the LRU algorithm, which returns the freed physical frame
   phyPage=lruAlgorithm();
   
-  DEBUG('p', "Before updating the IPT %i, pid, vpn, last used and valid is %i %i %i %i \n", phyPage, memoryTable[phyPage].pid, memoryTable[phyPage].vPage, memoryTable[phyPage].lastUsed, memoryTable[phyPage].valid );
+  
+  DEBUG('p', "### Before updating the IPT %i, pid, vpn, last used and valid is %i %i %i %i \n ###", 0, memoryTable[0].pid, memoryTable[0].vPage, memoryTable[0].lastUsed, memoryTable[0].valid );
+  DEBUG('p', "### Before updating the IPT %i, pid, vpn, last used and valid is %i %i %i %i \n ###", 1, memoryTable[1].pid, memoryTable[1].vPage, memoryTable[1].lastUsed, memoryTable[1].valid );
+  DEBUG('p', "### Before updating the IPT %i, pid, vpn, last used and valid is %i %i %i %i \n ###", 2, memoryTable[2].pid, memoryTable[2].vPage, memoryTable[2].lastUsed, memoryTable[2].valid );
+  DEBUG('p', "### Before updating the IPT %i, pid, vpn, last used and valid is %i %i %i %i \n ###", 3, memoryTable[3].pid, memoryTable[3].vPage, memoryTable[3].lastUsed, memoryTable[3].valid );
 
   //Page out the victim page to free the physical frame
   DoPageOut(phyPage);
@@ -178,7 +188,11 @@ int PageOutPageIn(int vpn)
   memoryTable[phyPage].lastUsed=0;
   memoryTable[phyPage].swapPtr=currentThread->space->swapPtr;
   
-  DEBUG('p', "After updating the IPT %i, pid, vpn, last used and valid is %i %i %i %i \n", phyPage, memoryTable[phyPage].pid, memoryTable[phyPage].vPage, memoryTable[phyPage].lastUsed, memoryTable[phyPage].valid );
+    DEBUG('p', "### After updating the IPT %i, pid, vpn, last used and valid is %i %i %i %i \n ###", 0, memoryTable[0].pid, memoryTable[0].vPage, memoryTable[0].lastUsed, memoryTable[0].valid );
+  DEBUG('p', "### After updating the IPT %i, pid, vpn, last used and valid is %i %i %i %i \n ###", 1, memoryTable[1].pid, memoryTable[1].vPage, memoryTable[1].lastUsed, memoryTable[1].valid );
+  DEBUG('p', "### After updating the IPT %i, pid, vpn, last used and valid is %i %i %i %i \n ###", 2, memoryTable[2].pid, memoryTable[2].vPage, memoryTable[2].lastUsed, memoryTable[2].valid );
+  DEBUG('p', "### After updating the IPT %i, pid, vpn, last used and valid is %i %i %i %i \n ###", 3, memoryTable[3].pid, memoryTable[3].vPage, memoryTable[3].lastUsed, memoryTable[3].valid );
+
 
   return phyPage;
 }
