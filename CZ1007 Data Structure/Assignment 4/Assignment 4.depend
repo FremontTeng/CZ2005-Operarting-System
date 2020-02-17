@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1549962815 source:c:\users\das studium\documents\ay2018-2019 sem 2\cz1007 data structures\assignment 4\main.cpp
+	<stdio.h>
+	<string.h>
+	<math.h>
+	<stdlib.h>
+	<ctype.h>
+
