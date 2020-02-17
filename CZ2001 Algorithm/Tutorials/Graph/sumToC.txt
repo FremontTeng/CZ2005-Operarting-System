@@ -1,0 +1,26 @@
+/*
+Q5 - Give A pseudocode of a recursive backtracking algorithm for the function sumToC(sequence s, int C).
+Sequence s, initially empty, is the (partial) sequence the algorithm has computed so far.
+Integer C is an input parameter of the function
+*/
+
+
+//This is a Pseudo Code
+sumToC(sequence s, int C){
+if (sum(s) == C) print s;
+else for (j=last(s)+1;j<=C;j++){
+  if (sum(s)+j <= C){
+  append j to end of s;
+  sumToC(s, C);
+  remove j from s;
+  }
+  
+  else return; //just to save unnecessary processing
+  }
+}
+
+/*
+Assumption:
+i) sum(s) will return the sum of the integers in s; return 0 if s is empty.
+ii) last(s) returns the last integer value in s; return 0 if s is empty.
+*/

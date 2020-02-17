@@ -1,0 +1,14 @@
+/*
+Q6
+Suppose we have an unsorted array A of n elements and we want to know if the array contains any duplicate elements.
+Outline (clearly) an efficient method for solving this problem.
+*/
+
+Bool ExistDuplicate(int A[], int n) {
+  MergeSort(A, n); // or Heapsort
+  for (int i = 1; i < n; i++) {
+  if (A[i] == A[i-1])
+    return true;
+  }
+  return false;
+}

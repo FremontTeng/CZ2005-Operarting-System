@@ -1,0 +1,18 @@
+/*
+Q1 - A sequence, x1, x2, . . ., xn, is said to be cyclically sorted if the smallest number in the sequence is xi for some i,
+and the sequence, xi, xi+1, . . ., xn, x1, x2, . . ., xi−1 is sorted in increasing order.
+Give an algorithm to find the minimal element in the sequence in O(log n) time.
+*/
+
+int minimum ( int n , int m) \\ n and m are the indices of the 1st and last elements respectively
+{
+  int mid ;
+  if (m == n) return array [n ]; \\ this is the min
+  else {
+    mid =( n+m) /2;
+    if ( array [ mid ] < array [m ]) \\ middle < last
+      return minimum (n , mid ); \\ find min in 1 st half
+    else
+      return minimum ( mid + 1 , m ); \\ find min in 2 nd half
+    }
+}
