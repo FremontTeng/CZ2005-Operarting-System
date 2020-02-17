@@ -1,0 +1,38 @@
+#VRML V2.0 utf8
+#polygon mesh example: a 2D Regular Hexagon
+
+Background {skyColor 1 1 0}
+
+#x = rcos(theta)+x0
+#y = rsin(theta)+y0
+
+Shape {
+	appearance Appearance{
+		material Material { 
+			diffuseColor     0 0 0   #rgb
+			specularColor    1 1 1	 #rgb
+			transparency 0   # try values between 0 and 1
+			shininess 1      # shiny surface, try values between 0 and 1
+			}
+		}
+	geometry IndexedFaceSet {
+		coord Coordinate {
+                    point [
+				#x=cos(theta) , y=sin(theta) where theta is 0,pi/3,2pi/3,pi,4pi/3,5pi/3
+				1.0  -1.0   0.0,	#vertex 0 
+				0.5   -1.0  0.86602540378	#vertex 1
+				-0.5   -1.0   0.86602540378	#vertex 2
+				-1.0   -1.0   0.0 #vertex 3
+				-0.5   -1.0   -0.86602540378	#vertex 4
+				0.5   -1.0   -0.86602540378	#vertex 5
+                    ]
+                }
+		coordIndex [
+			#bottom
+			 0,  1,  2,  3,  4,  5, -1
+			 #top
+			 5,  4,  3,  2,  1,  0, -1
+			]
+			
+	}
+}
