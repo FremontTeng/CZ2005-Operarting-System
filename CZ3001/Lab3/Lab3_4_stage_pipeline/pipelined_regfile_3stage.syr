@@ -1,0 +1,333 @@
+Release 14.4 - xst P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.34 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.35 secs
+ 
+--> Reading design: pipelined_regfile_3stage.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "pipelined_regfile_3stage.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "pipelined_regfile_3stage"
+Output Format                      : NGC
+Target Device                      : xc6slx4-3-csg225
+
+---- Source Options
+Top Module Name                    : pipelined_regfile_3stage
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "E:\CZ3001_Lab_Drei\Lab3_4_stage_pipeline\regfile.v" into library work
+Parsing verilog file "define.v" included at line 2.
+Parsing module <regfile>.
+Analyzing Verilog file "E:\CZ3001_Lab_Drei\Lab3_4_stage_pipeline\PC.v" into library work
+Parsing verilog file "define.v" included at line 1.
+Parsing module <PC1>.
+Analyzing Verilog file "E:\CZ3001_Lab_Drei\Lab3_4_stage_pipeline\memory.v" into library work
+Parsing verilog file "define.v" included at line 1.
+Parsing module <memory>.
+Analyzing Verilog file "E:\CZ3001_Lab_Drei\Lab3_4_stage_pipeline\ID_EXEstage.v" into library work
+Parsing verilog file "define.v" included at line 1.
+Parsing module <ID_EXE_stage>.
+Analyzing Verilog file "E:\CZ3001_Lab_Drei\Lab3_4_stage_pipeline\control.v" into library work
+Parsing verilog file "define.v" included at line 3.
+Parsing module <control>.
+Analyzing Verilog file "E:\CZ3001_Lab_Drei\Lab3_4_stage_pipeline\alu.v" into library work
+Parsing verilog file "define.v" included at line 1.
+Parsing module <alu>.
+Analyzing Verilog file "E:\CZ3001_Lab_Drei\Lab3_4_stage_pipeline\pipelined_regfile_3stage.v" into library work
+Parsing verilog file "define.v" included at line 2.
+Parsing module <pipelined_regfile_3stage>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <pipelined_regfile_3stage>.
+
+Elaborating module <PC1>.
+
+Elaborating module <memory>.
+"E:\CZ3001_Lab_Drei\Lab3_4_stage_pipeline\memory.v" Line 34. $write Opening Fileid 0\n
+WARNING:HDLCompiler:816 - "E:\CZ3001_Lab_Drei\Lab3_4_stage_pipeline\memory.v" Line 36: System function call feof not supported
+WARNING:HDLCompiler:817 - "E:\CZ3001_Lab_Drei\Lab3_4_stage_pipeline\memory.v" Line 49: System task fclose ignored for synthesis
+
+Elaborating module <control>.
+
+Elaborating module <regfile>.
+
+Elaborating module <ID_EXE_stage>.
+
+Elaborating module <alu>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <pipelined_regfile_3stage>.
+    Related source file is "E:\CZ3001_Lab_Drei\Lab3_4_stage_pipeline\pipelined_regfile_3stage.v".
+    Found 32-bit adder for signal <PCIN> created at line 32.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 Multiplexer(s).
+Unit <pipelined_regfile_3stage> synthesized.
+
+Synthesizing Unit <PC1>.
+    Related source file is "E:\CZ3001_Lab_Drei\Lab3_4_stage_pipeline\PC.v".
+    Found 32-bit register for signal <currPC>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+Unit <PC1> synthesized.
+
+Synthesizing Unit <memory>.
+    Related source file is "E:\CZ3001_Lab_Drei\Lab3_4_stage_pipeline\memory.v".
+WARNING:Xst:647 - Input <fileid> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1024x32-bit dual-port RAM <Mram_memory> for signal <memory>.
+    Found 10-bit register for signal <addr_r<9:0>>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  10 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <memory> synthesized.
+
+Synthesizing Unit <control>.
+    Related source file is "E:\CZ3001_Lab_Drei\Lab3_4_stage_pipeline\control.v".
+    Summary:
+	no macro.
+Unit <control> synthesized.
+
+Synthesizing Unit <regfile>.
+    Related source file is "E:\CZ3001_Lab_Drei\Lab3_4_stage_pipeline\regfile.v".
+    Found 1024-bit register for signal <n0052>.
+    Found 32-bit 32-to-1 multiplexer for signal <waddr[4]_regdata[31][31]_wide_mux_2_OUT> created at line 46.
+    Found 32-bit 32-to-1 multiplexer for signal <raddr1[4]_regdata[31][31]_wide_mux_40_OUT> created at line 49.
+    Found 32-bit 32-to-1 multiplexer for signal <raddr2[4]_regdata[31][31]_wide_mux_43_OUT> created at line 51.
+    Found 5-bit comparator equal for signal <waddr[4]_raddr1[4]_equal_40_o> created at line 49
+    Found 5-bit comparator equal for signal <waddr[4]_raddr2[4]_equal_43_o> created at line 51
+    Summary:
+	inferred 1024 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred  38 Multiplexer(s).
+Unit <regfile> synthesized.
+
+Synthesizing Unit <ID_EXE_stage>.
+    Related source file is "E:\CZ3001_Lab_Drei\Lab3_4_stage_pipeline\ID_EXEstage.v".
+    Found 32-bit register for signal <rdata1_out>.
+    Found 32-bit register for signal <rdata2_out>.
+    Found 32-bit register for signal <imm_out>.
+    Found 3-bit register for signal <opcode_out>.
+    Found 1-bit register for signal <alusrc_out>.
+    Found 5-bit register for signal <waddr_out>.
+    Summary:
+	inferred 105 D-type flip-flop(s).
+Unit <ID_EXE_stage> synthesized.
+
+Synthesizing Unit <alu>.
+    Related source file is "E:\CZ3001_Lab_Drei\Lab3_4_stage_pipeline\alu.v".
+    Found 32-bit subtractor for signal <a[31]_b[31]_sub_2_OUT> created at line 24.
+    Found 32-bit adder for signal <a[31]_b[31]_add_6_OUT> created at line 29.
+    Found 32x32-bit multiplier for signal <n0015> created at line 28.
+    Found 32-bit 8-to-1 multiplexer for signal <out> created at line 22.
+    Found 32-bit comparator lessequal for signal <n0003> created at line 27
+    Summary:
+	inferred   1 Multiplier(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <alu> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 1024x32-bit dual-port RAM                             : 1
+# Multipliers                                          : 1
+ 32x32-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 3
+ 32-bit adder                                          : 2
+ 32-bit subtractor                                     : 1
+# Registers                                            : 9
+ 1-bit register                                        : 1
+ 10-bit register                                       : 1
+ 1024-bit register                                     : 1
+ 3-bit register                                        : 1
+ 32-bit register                                       : 4
+ 5-bit register                                        : 1
+# Comparators                                          : 3
+ 32-bit comparator lessequal                           : 1
+ 5-bit comparator equal                                : 2
+# Multiplexers                                         : 42
+ 1-bit 2-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 36
+ 32-bit 32-to-1 multiplexer                            : 3
+ 32-bit 8-to-1 multiplexer                             : 1
+ 5-bit 2-to-1 multiplexer                              : 1
+# Xors                                                 : 1
+ 32-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <memory>.
+INFO:Xst:3226 - The RAM <Mram_memory> will be implemented as a BLOCK RAM, absorbing the following register(s): <addr_r>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 1024-word x 32-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <addr>          |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <memory> synthesized (advanced).
+
+Synthesizing (advanced) Unit <pipelined_regfile_3stage>.
+The following registers are absorbed into counter <pc/currPC>: 1 register on signal <pc/currPC>.
+Unit <pipelined_regfile_3stage> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 1024x32-bit single-port block RAM                     : 1
+# Multipliers                                          : 1
+ 32x32-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 2
+ 32-bit adder                                          : 1
+ 32-bit subtractor                                     : 1
+# Counters                                             : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 1129
+ Flip-Flops                                            : 1129
+# Comparators                                          : 3
+ 32-bit comparator lessequal                           : 1
+ 5-bit comparator equal                                : 2
+# Multiplexers                                         : 41
+ 32-bit 2-to-1 multiplexer                             : 36
+ 32-bit 32-to-1 multiplexer                            : 3
+ 32-bit 8-to-1 multiplexer                             : 1
+ 5-bit 2-to-1 multiplexer                              : 1
+# Xors                                                 : 1
+ 32-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+ERROR:Xst:528 - Multi-source in Unit <memory> on signal <wen>; this signal is connected to multiple drivers.
+Drivers are: 
+   Signal <N1> in Unit <pipelined_regfile_3stage> is assigned to GND
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.75 secs
+ 
+--> 
+
+Total memory usage is 259964 kilobytes
+
+Number of errors   :    1 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+
