@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "E:/CZ3001_Lab_Drei/CZ3001_Lab_Vier/pip_test.xst" -ofn "E:/CZ3001_Lab_Drei/CZ3001_Lab_Vier/pip_test.syr" 
