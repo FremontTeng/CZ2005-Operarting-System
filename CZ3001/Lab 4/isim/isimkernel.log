@@ -1,0 +1,28 @@
+Command line:
+   pip_test_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  61156
+
+Mon Mar 30 11:18:37 2020
+
+
+ Elaboration Time: 0.0312 sec
+
+ Current Memory Usage: 824.652 Meg
+
+ Total Signals          : 137
+ Total Nets             : 767
+ Total Signal Drivers   : 57
+ Total Blocks           : 12
+ Total Primitive Blocks : 10
+ Total Processes        : 69
+ Total Traceable Variables  : 72
+ Total Scalar Nets and Variables : 84218
+
+ Total Simulation Time: 0.0468 sec
+
+ Current Memory Usage: 824.652 Meg
+
+Mon Mar 30 11:18:43 2020
+
