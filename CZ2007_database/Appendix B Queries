@@ -1,0 +1,85 @@
+List of Tables:
+R1: Supervise(Person_ID, Topic)
+R2: Experiments(Experiment_Date, Attendance, Laboratory_name, Laboratory_school, Student_ID)
+R3: Take( Person_ID, Fields_of_Expertise, Course_Date)
+R4.1: Student(Person_ID, Student_ID)
+  R4.2: StudentInfo(Student_ID, Admission_Date, Majors_Minors)
+R5: Graduate(A:Person_ID, D:Student_ID, Y:Date_Of_Grad) 
+R6: Undergraduate(A:Person_ID, D:Student_ID)
+R7: Professor(A:Person_ID, B:Fields_of_Expertise)
+R8.1: StaffInfo(Staff_ID, Position, Date_Hired)
+  R8.2: Staff(Person_ID,  Staff_ID)
+R9: Admin_Staff(A:Person_ID, G:Staff_ID)
+R10.1: TechnicalStaff1(Staff_ID, Laboratory_name, Laboratory_school)
+  R10.2: TechnicalStaff2(Person_ID, Staff_ID)
+R11: Stakeholder(Person_ID, Domain)
+R12: Teaching_Laboratory(J: Laboratory_name, K: Laboratory_school)
+R13: Research_Laboratory(J: Laboratory_name, K: Laboratory_school)
+R14.1: Person(Person_ID, Person_name, phone, email, Student_ID)
+  R14.2: Person_AddrZip(Address, zip)
+  R14.3: Person_CityState(zip, city, state)
+  R14.4: Person_Address(Person_ID, Address)
+R15: State(State_Name)
+R16: Course(ID, Name)
+R17: Laboratory(S: Location, K: Laboratory School, T: Equipment_ID)
+R18: Suggestions(Date, Topic)
+R19: City(City_Name, State_Name)
+R20: Timetable(Date_Time, Class)
+R21.1: Equipment1(Equipment_ID, Model_No, Date_Purchased, Equipment_Name)
+  R21.2: Equipment2(Equipment_ID, Laboratory_Name, Laboratory_School)
+
+
+1. Find all Stakeholders who belong to the public domain.
+  SELECT Person_name
+  FROM Person
+  JOIN Stakeholder ON Stakeholder.Person_ID = Person.Person_ID
+  WHERE domain = 'public';
+
+2. Find all Stakeholders who have provided at least five comments or suggestions.
+  <See Q2 Query_Fremtt.sql>
+
+3. Find Graduates who are supervised by more than one professor and assigned to more than one research
+laboratory.
+<See Q3 Query_Fremtt.sql>
+  
+4. Find all Professors who teach more than one courses in the semester.   /* added "Person_ID" column into "Course" table  
+                                                                            to do this. */
+  SELECT Person_ID
+  FROM   Professor, Person
+  WHERE  Professor.Person_ID = Person.Person_ID
+  AND    Person.Person_ID = (Select   Person.Person_ID, COUNT(Course_Name)
+                             From     Takes
+                             GROUP BY Person_ID
+                             HAVING   COUNT(Course_Name) > 1);  
+
+5. List all the Equipment belonging to a particular Laboratory.
+  SELECT Equipment_ID
+  FROM Equipment2
+  GROUP BY Laboratory_Name;
+
+6. Find all Undergraduates who have not attended at least one laboratory experiments.
+  SELECT Student_ID
+  FROM Experiments
+  WHERE Experiments.Attendance<1
+
+7. List all Graduates who are doing research and taking courses in the semester.
+
+R5: Graduate(A:Person_ID, D:Student_ID, Y:Date_Of_Grad)
+
+R13: Research_Laboratory(J: Laboratory_name, K: Laboratory_school)
+
+R4.1: Student(Person_ID, Student_ID)
+
+R3: Take( Person_ID, Fields_of_Expertise, Course_Date)
+
+R16: Course(ID, Name, Student_ID)//added person_id as foreign key
+
+R22 AssignLab (Student_ID, Laboratory_Name, Laboratory_School)
+
+  SELECT Person_ID,Student_ID AS idList
+  FROM Graduate
+  WHERE (Graduate.Person_ID = Takes.Person_ID)
+  
+  Select Person_ID 
+  From idList
+  WHERE idList.Student_ID = AssignLab.Student_ID
