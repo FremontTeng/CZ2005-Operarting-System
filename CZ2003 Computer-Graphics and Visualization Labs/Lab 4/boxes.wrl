@@ -92,8 +92,12 @@ geometry FGeometry {
 # Change to some other formulae to see how the solid geometry changes 
 # based on the parameters domain and the sampling resolution defined below
 	definition "function frep(x,y,z,t){
-	body=0.25^2-(x/2)^2-(y/2)^2-(z/4)^2;
-	return body;}"
+  foot1=min(min(min(min(min(x-0.125,0.5-y),-0.75-y),0.375-x),z+0.1),0.1-z);
+  foot2=min(min(min(min(min(x+0.375,0.5-y),-0.75-y),-0.125-x),z+0.1),0.1-z);
+
+  feet = max(foot1,foot2);
+    return feet;}"
+
 
 # Adjust the tight bounding box and an optimal resolution
 bboxCenter 0 0 0

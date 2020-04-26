@@ -79,7 +79,7 @@ EXTERNPROTO FTransform [
 	field SFInt32 frames
 ] "http://www3.ntu.edu.sg/home/assourin/FVRML/FVRML.wrl#FTransform"
 
-Background {skyColor 0 0 1}
+Background {skyColor 1 1 0}
 
 # External VRML object "coordinate system" is included in the scene
 Inline {url "http://www3.ntu.edu.sg/home/assourin/FVRML/CoordinateAxes.wrl"}
@@ -92,8 +92,27 @@ geometry FGeometry {
 # Change to some other formulae to see how the solid geometry changes 
 # based on the parameters domain and the sampling resolution defined below
 	definition "function frep(x,y,z,t){
-	body=0.25^2-(x/2)^2-(y/2)^2-(z/4)^2;
-	return body;}"
+	body=0.3*(0.25^2-(x/2)^2-(y/2)^2-(z/3)^2);
+
+	eye1 = 0.05^2-(x+0.25)^2-(y-0.2)^2-(z-0.6)^2;
+	eye2 = 0.05^2-(x-0.25)^2-(y-0.2)^2-(z-0.6)^2;
+	eyes = max(eye1,eye2);
+	
+	leg1=min(y+0.75,min(0.05^2-(x-0.25)^2-z^2,-y));
+	leg2=min(y+0.75,min(0.05^2-(x+0.25)^2-z^2,-y));
+	legs = max(leg1,leg2);
+
+	wings=3*x^2-10*z^2-1000*y^2;
+	beak=min(z,(z-1)^2-(x/0.5)^2-(y/0.5)^2);
+
+	foot1=min(min(min(min(min(x-0.125,0.5-y),-0.75-y),0.375-x),z+0.1),0.1-z);
+    foot2=min(min(min(min(min(x+0.375,0.5-y),-0.75-y),-0.125-x),z+0.1),0.1-z);
+    feet = max(foot1,foot2);
+	
+	bottom = max(feet,legs);
+	top = max(max(eyes,body),max(wings,beak));
+	final=max(top,bottom);
+	return final;}"
 
 # Adjust the tight bounding box and an optimal resolution
 bboxCenter 0 0 0
@@ -105,6 +124,6 @@ resolution [100 100 100]
 appearance FAppearance {
 material FMaterial { 
 # Variable color is defined for the CGS solid
-diffuseColor "r=1; g=(v+1)/2; b=0;"
+diffuseColor "r=0; g=0.7+0.3*cos(v*2*pi); b=0.7+0.3*v;"
    }    }
 }

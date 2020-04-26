@@ -92,8 +92,9 @@ geometry FGeometry {
 # Change to some other formulae to see how the solid geometry changes 
 # based on the parameters domain and the sampling resolution defined below
 	definition "function frep(x,y,z,t){
-	body=0.25^2-(x/2)^2-(y/2)^2-(z/4)^2;
-	return body;}"
+ wings=3*x^2-10*z^2-1000*y^2;
+    return wings;}"
+
 
 # Adjust the tight bounding box and an optimal resolution
 bboxCenter 0 0 0
